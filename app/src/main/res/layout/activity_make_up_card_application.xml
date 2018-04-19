@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+        android:id="@+id/custom_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_background="@drawable/btn_back_selector"
+        app:title_text="@string/label_make_up_card_application"/>
+
+    <ScrollView style="@style/style_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20">
+
+                <TextView
+                    android:id="@+id/label_make_up_order_num"
+                    style="@style/style_8a_label"
+                    android:text="@string/lbl_order_num"/>
+
+                <TextView
+                    android:id="@+id/label_make_up_time"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_make_up_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/make_up_time"/>
+
+                <TextView
+                    android:id="@+id/label_m_check_in_time"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_make_up_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/m_check_in_time"/>
+
+                <TextView
+                    android:id="@+id/label_m_punch_people"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_m_check_in_time"
+                    android:layout_alignRight="@+id/label_make_up_time"
+                    android:layout_alignEnd="@+id/label_make_up_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/m_punch_people"/>
+
+                <TextView
+                    android:id="@+id/tv_make_up_order_num"
+                    style="@style/style_1e_label"
+                    android:layout_toRightOf="@+id/label_make_up_order_num"
+                    android:layout_toEndOf="@+id/label_make_up_order_num"
+                    tools:text="Q0000100000001"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_make_up_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/label_m_check_in_time"
+                    android:layout_toEndOf="@+id/label_m_check_in_time"
+                    android:layout_below="@+id/tv_make_up_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_make_up_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/style_login_edit_text"
+                        android:hint="@string/hint_select_make_up_time"
+                        android:drawableRight="@drawable/ic_select_tip"
+                        android:drawableEnd="@drawable/ic_select_tip"
+                        android:paddingEnd="@dimen/dimen_5"
+                        android:paddingRight="@dimen/dimen_5"
+                        android:maxLines="5"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/div_input_edit_line_normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_m_check_in_time"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/ll_make_up_time"
+                    android:layout_toRightOf="@+id/label_m_check_in_time"
+                    android:layout_toEndOf="@+id/label_m_check_in_time"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    tools:text="2017-11-11 17:00:00"/>
+
+                <TextView
+                    android:id="@+id/tv_m_punch_people"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/tv_m_check_in_time"
+                    android:layout_toRightOf="@+id/label_m_check_in_time"
+                    android:layout_toEndOf="@+id/label_m_check_in_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:singleLine="true"
+                    android:ellipsize="start"
+                    tools:text="李四"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/label_missing_card_reason"
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/missing_card_reason_1"/>
+
+            <EditText
+                android:id="@+id/et_missing_card_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/style_login_edit_text"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:hint="@string/hint_missing_card_reason"
+                android:maxLines="5"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/div_input_edit_line_normal"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"/>
+
+            <TextView
+                android:id="@+id/label_m_image"
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/m_image"/>
+
+            <ImageView
+                android:id="@+id/iv_m_image"
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dimen_100"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/shape_8a_pane_bg"
+                android:scaleType="fitXY"
+                android:src="@drawable/selector_image_add"
+                android:contentDescription="@null"/>
+
+            <Button
+                android:id="@+id/btn_make_up_application"
+                style="@style/style_btn"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:onClick="submitMakeUpFieldPunch"
+                android:text="@string/btn_submit"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

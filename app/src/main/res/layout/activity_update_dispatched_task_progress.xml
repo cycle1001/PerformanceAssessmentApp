@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tool="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+            android:id="@+id/custom_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_background="@drawable/btn_back_selector"
+            app:title_text="@string/title_update_dispatched_task_progress"/>
+
+    <ScrollView
+            style="@style/style_scroll_view">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_15"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dimen_10">
+
+                <TextView
+                        style="@style/style_8a_label"
+                        android:text="@string/gs_post_single_num"/>
+
+                <TextView
+                        android:id="@+id/tv_task_id"
+                        style="@style/style_1e_label"
+                        android:text="JXT20171111"/>
+            </LinearLayout>
+
+            <TextView
+                    style="@style/style_8a_label"
+                    android:text="@string/gs_work_item_type"
+                    android:layout_marginTop="@dimen/dimen_15"/>
+
+            <TextView
+                    android:id="@+id/tv_project_type"
+                    style="@style/style_1e_label"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text=""/>
+
+            <TextView
+                    style="@style/style_8a_label"
+                    android:text="@string/gs_publish_content"
+                    android:layout_marginTop="@dimen/dimen_10"/>
+
+            <TextView
+                    android:id="@+id/tv_task_content"
+                    style="@style/style_1e_label"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text=""/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <!-- 标签部分-->
+
+                <!--<TextView
+                        android:id="@+id/label_task_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/label_project_type"
+                        android:layout_alignEnd="@+id/label_project_type"
+                        tool:text="派发单号"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_dispatched_task_id"/>
+
+                <TextView
+                        android:id="@+id/label_project_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_task_id"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        tool:text="工作项目类型"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_project_type"/>-->
+
+                <TextView
+                        android:id="@+id/label_dispatch_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tool:text="派单时间"
+                        android:layout_alignRight="@+id/label_project_type"
+                        android:layout_below="@+id/label_task_score"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_dispatch_time"/>
+
+                <TextView
+                        android:id="@+id/label_dispatcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_dispatch_time"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        tool:text="派单人"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_dispatcher"/>
+
+                <!--<TextView
+                        android:id="@+id/label_task_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/label_project_type"
+                        android:layout_below="@+id/label_dispatcher"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        tool:text="发布内容"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_task_content"/>-->
+
+                <TextView
+                        android:id="@+id/label_task_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/label_project_type"
+                        android:layout_below="@+id/label_dispatcher"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        tool:text="状态"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_task_status"/>
+
+                <TextView
+                        android:id="@+id/label_director"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/label_project_type"
+                        android:layout_below="@+id/label_task_status"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        tool:text="责任人"
+                        style="@style/style_8a_label"
+                        android:text="@string/label_director"/>
+
+                <TextView
+                        android:id="@+id/label_received_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/label_project_type"
+                        android:layout_below="@+id/label_director"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        style="@style/style_8a_label"
+                        tool:text="接单时间"
+                        android:text="@string/label_received_time"/>
+
+                <!-- 内容部分-->
+
+                <!--<TextView
+                        android:id="@+id/tv_task_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_toRightOf="@+id/label_task_id"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="123"/>
+
+                <TextView
+                        android:id="@+id/tv_project_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_task_id"
+                        android:layout_toRightOf="@+id/label_project_type"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>-->
+
+                <TextView
+                        android:id="@+id/tv_dispatch_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_score_standard"
+                        android:layout_toRightOf="@+id/label_dispatch_time"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>
+
+                <TextView
+                        android:id="@+id/tv_dispatcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_dispatch_time"
+                        android:layout_toRightOf="@+id/label_dispatcher"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>
+
+                <!--<TextView
+                        android:id="@+id/tv_task_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_dispatcher"
+                        android:layout_toRightOf="@+id/label_task_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>-->
+
+                <TextView
+                        android:id="@+id/tv_task_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_dispatcher"
+                        android:layout_toRightOf="@+id/label_task_status"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>
+
+                <TextView
+                        android:id="@+id/tv_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_task_status"
+                        android:layout_toRightOf="@+id/label_director"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>
+
+                <TextView
+                        android:id="@+id/tv_received_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:layout_below="@+id/tv_receiver"
+                        android:layout_toRightOf="@+id/label_received_time"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        tool:text="@string/default_label"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/label_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tool:text="完成百分比"
+                    android:layout_alignRight="@+id/label_project_type"
+                    android:layout_below="@+id/label_received_time"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    style="@style/style_8a_label"
+                    android:text="@string/label_progress"/>
+
+            <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/percent_sign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_25"
+                        style="@style/style_1e_label"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        tool:text="%"
+                        android:text="%"/>android:layout_toRightOf="@+id/percent_sign"-->
+
+                <EditText
+                        android:id="@+id/tv_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/style_1e_label"
+                        android:background="@null"
+                        android:numeric="integer"
+                        android:inputType="number"
+                        android:digits="0123456789."
+                        android:maxLength="6"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="flagNoExtractUi"
+                        android:textColorHint="@color/c_bbbbbb"
+                        android:hint="@string/default_label"/>
+
+            <!--</RelativeLayout>-->
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/div_input_edit_line_normal" />
+
+            <TextView
+                    android:id="@+id/label_finished_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tool:text="完成时间"
+                    android:layout_alignRight="@+id/label_project_type"
+                    android:layout_below="@+id/label_progress"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    style="@style/style_8a_label"
+                    android:text="@string/label_finished_time"/>
+
+            <TextView
+                    android:id="@+id/tv_finished_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/tv_progress"
+                    android:layout_toRightOf="@+id/label_finished_time"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableRight="@drawable/ic_select_tip"
+                    android:drawableEnd="@drawable/ic_select_tip"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_5"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColorHint="@color/c_bbbbbb"
+                    tool:text="@string/default_label"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/div_input_edit_line_normal" />
+
+            <TextView
+                    android:id="@+id/label_task_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tool:text="完成工作图片"
+                    android:layout_alignRight="@+id/label_project_type"
+                    android:layout_below="@+id/label_finished_time"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    style="@style/style_8a_label"
+                    android:text="@string/label_task_img"/>
+
+            <ImageView
+                    android:id="@+id/iv_task_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/label_task_img"
+                    android:layout_toRightOf="@+id/label_task_img"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:src="@drawable/selector_image_add"/>
+
+            <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    style="@style/style_btn"
+                    android:text="@string/btn_submit"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

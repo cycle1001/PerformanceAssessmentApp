@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+        android:id="@+id/custom_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_background="@drawable/btn_back_selector"
+        app:title_text="@string/title_punch_card_approved" />
+
+    <ScrollView style="@style/style_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lbl_punch_num"
+                    style="@style/style_8a_label"
+                    android:text="@string/lbl_punch_num" />
+
+                <TextView
+                    android:id="@+id/tv_punch_num"
+                    style="@style/style_1e_label"
+                    android:layout_toRightOf="@+id/lbl_punch_num"
+                    android:layout_toEndOf="@+id/lbl_punch_num"
+                    tools:text="JXT20171111" />
+
+                <TextView
+                    android:id="@+id/label_punch_person"
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/lbl_punch_num"
+                    android:layout_alignRight="@+id/lbl_punch_num"
+                    android:layout_below="@+id/lbl_punch_num"
+                    android:text="@string/lbl_punch_person"
+                    android:layout_marginTop="@dimen/dimen_15"/>
+
+                <TextView
+                    android:id="@+id/tv_punch_person"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/lbl_punch_num"
+                    android:layout_toRightOf="@+id/label_punch_person"
+                    android:layout_toEndOf="@+id/label_punch_person"
+                    tools:text="李四"
+                    android:layout_marginTop="@dimen/dimen_15"/>
+
+                <TextView
+                    android:id="@+id/label_punch_time"
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/lbl_punch_num"
+                    android:layout_alignRight="@+id/lbl_punch_num"
+                    android:layout_below="@+id/label_punch_person"
+                    android:text="@string/lbl_punch_time"
+                    android:layout_marginTop="@dimen/dimen_15"/>
+
+                <TextView
+                    android:id="@+id/tv_punch_time"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/tv_punch_person"
+                    android:layout_toRightOf="@+id/label_punch_time"
+                    android:layout_toEndOf="@+id/label_punch_time"
+                    tools:text="2018-02-02 18:00:00"
+                    android:layout_marginTop="@dimen/dimen_15"/>
+
+                <TextView
+                    android:id="@+id/label_punch_reason"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_punch_time"
+                    android:text="@string/label_punch_reason"
+                    android:layout_marginTop="@dimen/dimen_15"/>
+
+                <TextView
+                    android:id="@+id/tv_punch_reason"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_punch_reason"
+                    tools:text="2018-02-02 18:00:00"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/working_pic" />
+
+            <ImageView
+                android:id="@+id/iv_working_pic"
+                android:layout_width="@dimen/dimen_200"
+                android:layout_height="@dimen/dimen_200"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:background="@drawable/ic_default_pic"
+                android:scaleType="fitCenter"
+                android:contentDescription="@null" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginBottom="@dimen/dimen_30">
+
+                <Button
+                    android:id="@+id/btn_punch_agree"
+                    style="@style/style_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginEnd="@dimen/dimen_10"
+                    android:onClick="agreeCommit"
+                    android:text="@string/btn_agree"/>
+
+                <Button
+                    android:id="@+id/btn_punch_no_agree"
+                    style="@style/style_btn_cancel"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:onClick="disagreeCommit"
+                    android:text="@string/btn_no_agree"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

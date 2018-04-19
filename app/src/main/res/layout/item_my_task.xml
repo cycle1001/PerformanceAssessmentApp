@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/c_white"
+    android:padding="@dimen/dimen_10">
+
+    <TextView
+        android:id="@+id/tv_list_num"
+        style="@style/style_1e_label"
+        android:layout_width="match_parent"
+        android:layout_weight="12"
+        android:textSize="@dimen/text_18"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginEnd="@dimen/dimen_5"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        tools:text="199999"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/lbl_task_num"
+            style="@style/style_8a_label"
+            android:text="@string/label_task_num" />
+
+        <TextView
+            android:id="@+id/tv_task_num"
+            style="@style/style_1e_label"
+            android:layout_toEndOf="@id/lbl_task_num"
+            android:layout_toRightOf="@id/lbl_task_num"
+            tools:text="F00011234567891" />
+
+        <TextView
+            android:id="@+id/tv_task_content"
+            style="@style/style_1e_label"
+            android:textSize="@dimen/text_14"
+            android:layout_below="@id/lbl_task_num"
+            android:layout_marginBottom="@dimen/dimen_3"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="日常任务-优质服务-工作人员提供优质、方便、规范、真诚的服务" />
+
+        <TextView
+            android:id="@+id/label_task_status"
+            style="@style/style_8a_label"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:layout_below="@id/tv_task_content"
+            android:text="@string/label_task_status1" />
+
+        <TextView
+            android:id="@+id/tv_task_status"
+            style="@style/style_1e_label"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="@dimen/dimen_6"
+            android:layout_below="@id/tv_task_content"
+            android:layout_toRightOf="@id/label_task_status"
+            tools:text="2017-12-27 15:30:00" />
+
+    </RelativeLayout>
+
+</LinearLayout>

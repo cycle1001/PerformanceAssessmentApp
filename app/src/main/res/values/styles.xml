@@ -1,0 +1,130 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="android:windowDisablePreview">true</item>-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/app_theme_background</item>
+    </style>
+
+    <style name="live_activity_style" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--登录页面编辑框样式-->
+    <style name="style_login_edit_text">
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/c_bbbbbb</item>
+        <item name="android:textColor">@color/c_1e1e1e</item>
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/logo_splash</item>
+    </style>
+
+    <!-- Listview的样式 -->
+    <style name="style_listview">
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:footerDividersEnabled">false</item>
+    </style>
+
+    <style name="style_listview_with_spacing">
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:footerDividersEnabled">false</item>
+    </style>
+
+    <style name="text_input_layout_theme" >
+        <item name="android:textColorHint">@color/c_595959</item>
+        <item name="android:textColor">@color/c_1e1e1e</item>
+    </style>
+
+    <style name="edit_pwd_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_h_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/c_8a8a8a</item>
+    </style>
+
+    <style name="style_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_bg_selector</item>
+        <item name="android:textSize">@dimen/text_20</item>
+        <item name="android:textColor">@color/c_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dimen_10</item>
+    </style>
+
+    <style name="style_btn_cancel" style="?android:attr/borderlessButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_cancel_selector</item>
+        <item name="android:textSize">@dimen/text_20</item>
+        <item name="android:textColor">@color/c_black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dimen_10</item>
+    </style>
+
+    <style name="style_8a_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c_8a8a8a</item>
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="style_1e_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c_1e1e1e</item>
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="style_scroll_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="style_dialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="StatusBarTranslucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>

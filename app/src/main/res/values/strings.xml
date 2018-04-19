@@ -1,0 +1,324 @@
+<resources>
+    <string name="app_name">绩效通</string>
+
+    <string name="default_label">xxxxxx</string>
+    <string name="label_default_loading">请稍候...</string>
+
+    <string name="toast_request_timeout">请求超时！</string>
+    <string name="toast_request_failure">网络连接失败，请检查网络设置！</string>
+
+    <string name="tab_main_page">首  页</string>
+    <string name="tab_task">工作</string>
+    <string name="tab_personal_center">个人中心</string>
+
+    <string name="tips_loading">正在加载...</string>
+    <string name="tips_empty">没有相关数据</string>
+    <string name="tips_retry">获取数据失败，点击重试！</string>
+    <string name="tips_load_failure">获取数据失败</string>
+
+    <string name="btn_cancel">取消</string>
+
+    <string name="toast_submit_success">提交成功</string>
+    <string name="toast_submit_failure">提交失败</string>
+    <string name="toast_input_date_error">输入的日期不符合要求，请重新选择</string>
+
+    <string name="label_title_prompt">提示</string>
+    <string name="msg_set_permission_and_restart">请到设置里开启需要的权限并重启该应用</string>
+    <string name="toast_get_menu_failure">获取菜单配置失败</string>
+    <string name="label_logout">退出登录</string>
+
+    <!--发布单状态-->
+    <string name="task_state_non_distribute">未发布</string>
+    <string name="task_state_distributing">发布中</string>
+    <string name="task_state_executing">执行中</string>
+    <string name="task_state_finished">任务完成</string>
+
+    <!--派单状态-->
+    <string name="dispatch_status_dispatched">已派单</string>
+    <string name="dispatch_status_executing">派单执行中</string>
+    <string name="dispatch_status_finished">派单执行完成</string>
+    <string name="dispatch_status_assessed">派单考核完成</string>
+
+    <!--工作模块-->
+    <string name="title_attendance_management">考勤管理</string>
+    <string name="label_fieldwork_punching">外勤打卡</string>
+    <string name="label_correct_fieldwork_punching">补外勤打卡</string>
+    <string name="label_punch_approval">补打卡审核</string>
+
+    <string name="title_task_management">工单管理</string>
+    <string name="label_publish_task">发布工单</string>
+    <string name="label_grab_task">抢单</string>
+    <string name="label_approve_for_grabbed_task">抢单审批</string>
+    <string name="label_grabbed_task_finished_progress">抢单完成进度</string>
+    <string name="label_assess_performance_for_grabbed_task">抢单考核</string>
+    <string name="label_dispatch_task">派单</string>
+    <string name="label_receive_task">接单</string>
+    <string name="label_dispatched_task_finished_progress">派单完成进度</string>
+    <string name="label_assess_performance_for_received_task">接单考核</string>
+
+    <string name="title_performance_management">积分查询</string>
+    <string name="label_employ_performance">员工绩效</string>
+    <string name="label_departmental_performance">部门绩效</string>
+    <string name="label_query_performance">绩效查询</string>
+
+    <!--我的-->
+    <string name="label_new_task">当前任务</string>
+    <string name="label_my_task">我的任务</string>
+    <string name="label_my_received_task">我接到的任务单</string>
+    <string name="label_my_grabbed_task">我抢到的任务单</string>
+    <string name="label_user_name">姓名：</string>
+    <string name="label_dept_name">部门：</string>
+    <string name="label_position_name">职位：</string>
+    <string name="label_user_no">用户登录名：</string>
+    <string name="label_query_work_order">查询工单</string>
+
+    <!--派单-->
+    <string name="label_dispatching_task_id">派发单号</string>
+    <string name="label_project_type">工作项目类型</string>
+    <string name="label_dept">部门选择</string>
+    <string name="label_dispatcher">派单人</string>
+    <string name="label_task_content">发布内容</string>
+    <string name="label_score_standard">积分标准</string>
+    <string name="label_dispatch_time">发布时间</string>
+    <string name="label_receiver">接单人</string>
+    <string name="label_received_time">接单时间</string>
+    <string name="label_dispatch_location">派单位置</string>
+    <string name="label_executor">指定执行人</string>
+    <string name="label_task_status">状态</string>
+    <string name="toast_select_director">请选择责任人</string>
+    <string name="label_select_director">责任人选择</string>
+
+    <!--接单-->
+    <string name="label_status_dispatched">已派发</string>
+    <string name="label_dispatching_task_list">可接的任务单列表</string>
+    <string name="toast_task_received_or_finished">该任务单已经被接或者已完成</string>
+
+    <!--填写任务单实施进度-->
+    <string name="title_update_dispatched_task_progress">任务单实施进度</string>
+    <string name="label_dispatched_task_id">派发单号</string>
+    <string name="hint_input_finished_time">请选择完成时间</string>
+    <string name="hint_input_task_progress">请输入完成百分比，如13.14</string>
+    <string name="toast_percent_limitation">请输入0到100的百分比</string>
+    <string name="toast_add_finished_task_image">请添加完成工作图片</string>
+
+    <!--派单绩效考核-->
+    <string name="label_director">责任人</string>
+    <string name="label_progress">完成百分比</string>
+    <string name="label_finished_time">完成时间</string>
+    <string name="label_standard_points">标准积分</string>
+    <string name="label_task_img">完成工作图片</string>
+    <string name="label_quality_assessment">质量考核</string>
+    <string name="label_additional_score">困难系数</string>
+    <string name="label_final_score">最后得分</string>
+    <string name="label_overview">综合评价</string>
+    <string name="toast_additional_score_limitation">附加得分请输入0到10的数值</string>
+    <string name="toast_final_score_limitation">最终得分请输入适合的数值</string>
+    <string name="toast_quality_assessment_score_limitation">质量考核得分请输入适合的数值</string>
+    <string name="toast_input_overview">请输入综合评价</string>
+
+    <!--员工绩效评价-->
+    <string name="title_employee_performance_assessment">员工绩效评价</string>
+    <string name="label_project">项目</string>
+    <string name="label_work_attitude">项目</string>
+    <string name="label_attendance">值班</string>
+    <string name="label_responsible_task">所务工作</string>
+
+    <string name="label_add_points">加分</string>
+    <string name="label_minus_points">减分</string>
+    <string name="label_instruction">说明</string>
+    <string name="label_task_time">时间</string>
+
+    <!--部门绩效评价-->
+    <string name="title_departmental_performance_assessment">部门绩效评价</string>
+    <string name="label_department">部门</string>
+    <string name="label_score">得分</string>
+
+    <!--查询绩效-->
+    <string name="title_query_performance">查询绩效</string>
+    <string name="title_query_task_score">任务积分查询</string>
+    <string name="label_start_date">开始时间</string>
+    <string name="label_end_date">结束时间</string>
+    <string name="hint_input_start_date">请选择开始时间</string>
+    <string name="hint_input_end_date">请选择结束时间</string>
+    <string name="label_task_detail">任务详情</string>
+    <string name="label_project_content">工作内容</string>
+    <string name="label_total_score">总得分</string>
+    <string name="btn_query">查询</string>
+
+    <string name="label_query_month_performance_score">月度积分查询</string>
+    <string name="hint_input_target_date">请选择查询月份</string>
+    <string name="label_query_month">查询月份</string>
+    <string name="label_score_detail">得分详情</string>
+    <string name="label_this_month_task_score">本月任务积分</string>
+    <string name="label_overview_score">综合评价得分</string>
+    <string name="label_departmental_score">部门得分</string>
+
+    <!--登录-->
+    <string name="label_login">登录</string>
+
+    <string name="label_account">账号</string>
+    <string name="label_password">密码</string>
+    <string name="hint_input_account">输入账号</string>
+    <string name="hint_input_password">输入密码</string>
+    <string name="label_remember_password">记住密码</string>
+
+    <string name="btn_confirm">确定</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_release">发布</string>
+    <string name="btn_grab_single">抢单</string>
+    <string name="btn_agree">同意</string>
+    <string name="btn_no_agree">不同意</string>
+
+    <string name="toast_login_failure">登录失败</string>
+    <string name="toast_get_login_data_failure">获取登录信息失败</string>
+
+    <!--修改密码-->
+    <string name="label_change_pwd">修改密码</string>
+    <string name="old_pwd">旧密码</string>
+    <string name="new_pwd">新密码</string>
+    <string name="confirm_pwd">确认密码</string>
+    <string name="hint_old_pwd">请输入原始密码</string>
+    <string name="hint_new_pwd">请输入新密码</string>
+    <string name="hint_confirm_pwd">请输入确认密码</string>
+
+    <!--外勤打卡-->
+    <string name="label_field_punch">外勤打卡</string>
+    <string name="working_hours">上班时间&#160;&#160;</string>
+    <string name="off_time">下班时间&#160;&#160;</string>
+    <string name="check_location">打卡位置&#160;&#160;</string>
+    <string name="check_int_time">打卡时间&#160;&#160;</string>
+    <string name="punch_people">打卡人&#160;&#160;</string>
+
+    <string name="lbl_order_num">外勤单号&#160;&#160;</string>
+
+    <!--补卡申请-->
+    <string name="label_make_up_card_application">补卡申请</string>
+    <string name="make_up_time">补卡时间&#160;&#160;</string>
+    <string name="hint_select_make_up_time">请选择补卡时间</string>
+    <string name="missing_card_reason_1">*缺卡原因</string>
+    <string name="missing_card_reason"><Data><![CDATA[<font color="#ff0000">*</font>缺卡原因]]></Data></string>
+    <string name="hint_missing_card_reason">请输入缺卡原因</string>
+    <string name="m_image">图片</string>
+    <string name="m_check_in_time">打卡时间&#160;&#160;</string>
+    <string name="m_punch_people">打卡人&#160;&#160;</string>
+
+
+    <string name="label_select">选择</string>
+    <string name="select_work_item_type">选择工作项目类型</string>
+    <string name="select_participant">选择参与人</string>
+    <string name="label_no">无</string>
+    <string name="tip_location_loading">正在定位中……</string>
+    <string name="tip_location_failed">定位失败，请检查定位设置</string>
+    <string name="label_location_again">重新定位>></string>
+
+    <!--发布单-->
+    <string name="title_posting_single">发布工单</string>
+    <string name="label_post_single_num">发布单号&#160;&#160;</string>
+    <string name="work_item_type">工作项目类型</string>
+    <string name="hint_work_item_type">请选择工作项目类型</string>
+    <string name="publish_content">发布内容</string>
+    <string name="hint_publish_content">请选择项目类型或输入内容</string>
+    <string name="label_release_time">发布时间&#160;&#160;</string>
+    <string name="label_publisher">发布人&#160;&#160;</string>
+    <string name="label_status">状态&#160;&#160;</string>
+    <string name="status_unpublished">未发布</string>
+    <string name="label_integral_standard">积分标准&#160;&#160;</string>
+    <string name="label_applicable_team">适用班组&#160;&#160;</string>
+    <string name="hint_applicable_team">请选择班组</string>
+
+    <string name="tip_select_work_item">请选择工作项目类型</string>
+    <string name="tip_input_work_content">请输入发布内容</string>
+    <string name="tip_input_score">请输入积分标准</string>
+
+    <!--抢单-->
+    <string name="title_grab_single">抢单</string>
+    <string name="gs_post_single_num">发布单号&#160;&#160;</string>
+    <string name="gs_work_item_type">工作项目类型&#160;&#160;</string>
+    <string name="gs_publish_content">发布内容&#160;&#160;</string>
+    <string name="gs_release_time">发布时间&#160;&#160;</string>
+    <string name="gs_publisher">发布人&#160;&#160;</string>
+    <string name="gs_status">状态&#160;&#160;</string>
+    <string name="gs_published">已发布</string>
+    <string name="gs_grab_single_time">抢单时间&#160;&#160;</string>
+    <string name="gs_grab_single_person">抢单人&#160;&#160;</string>
+    <string name="gs_grab_single_position">抢单位置&#160;&#160;</string>
+    <string name="lbl_again_location">重新定位</string>
+
+    <!--抢单审批-->
+    <string name="title_grab_single_approval">抢单审批</string>
+    <string name="gsa_post_single_num">发布单号&#160;&#160;</string>
+    <string name="gsa_work_item_type">工作项目类型&#160;&#160;</string>
+    <string name="gsa_publish_content">发布内容&#160;&#160;</string>
+    <string name="gsa_release_time">发布时间&#160;&#160;</string>
+    <string name="gsa_publisher">发布人&#160;&#160;</string>
+    <string name="gsa_status">状态&#160;&#160;</string>
+    <string name="gsa_published">已抢单</string>
+    <string name="gsa_grab_single_time">抢单时间&#160;&#160;</string>
+    <string name="gsa_grab_single_person">抢单人&#160;&#160;</string>
+    <string name="gsa_grab_single_position">抢单位置&#160;&#160;</string>
+    <string name="processing_time">审批时间&#160;&#160;</string>
+    <string name="gsa_approver">审批人&#160;&#160;</string>
+
+    <!--抢单实施进度-->
+    <string name="title_grab_single_progress">抢单实施进度填写</string>
+    <string name="gsp_post_single_num">发布单号&#160;&#160;</string>
+    <string name="gsp_work_item_type">工作项目类型&#160;&#160;</string>
+    <string name="gsp_publish_content">发布内容&#160;&#160;</string>
+    <string name="gsp_release_time">发布时间&#160;&#160;</string>
+    <string name="gsp_publisher">发布人&#160;&#160;</string>
+    <string name="gsp_status">状态&#160;&#160;</string>
+    <string name="gsp_published">已审批</string>
+    <string name="gsp_grab_single_time">抢单时间&#160;&#160;</string>
+    <string name="gsp_grab_single_person">抢单人&#160;&#160;</string>
+    <string name="gsp_grab_single_position">抢单位置&#160;&#160;</string>
+    <string name="gsp_participant">参与人&#160;&#160;</string>
+    <string name="hint_gsp_participant">请选择同班组的参与人</string>
+    <string name="gsp_complete_percentage">完成百分比&#160;&#160;</string>
+    <string name="hint_complete_percentage">完成的百分比1-100,如13.14</string>
+    <string name="gsp_complete_time">完成时间&#160;&#160;</string>
+    <string name="gsp_select_complete_time">请选择完成时间</string>
+    <string name="gsp_finish_working_pic">完成工作图片</string>
+    
+    <!--抢单绩效考核-->
+    <string name="grab_single_performance_appraisal">抢单绩效考核</string>
+    <string name="gspa_post_single_num">发布单号&#160;&#160;</string>
+    <string name="gspa_work_item_type">工作项目类型&#160;&#160;</string>
+    <string name="gspa_publish_content">发布内容&#160;&#160;</string>
+    <string name="gspa_release_time">发布时间&#160;&#160;</string>
+    <string name="gspa_publisher">发布人&#160;&#160;</string>
+    <string name="gspa_status">状态&#160;&#160;</string>
+    <string name="gspa_published">已完成</string>
+    <string name="gspa_grab_single_time">抢单时间&#160;&#160;</string>
+    <string name="gspa_grab_single_person">抢单人&#160;&#160;</string>
+    <string name="gspa_grab_single_position">抢单位置&#160;&#160;</string>
+    <string name="gspa_participant">参与人&#160;&#160;</string>
+    <string name="gspa_complete_percentage">完成百分比&#160;&#160;</string>
+    <string name="gspa_complete_time">完成时间&#160;&#160;</string>
+    <string name="gspa_standard_points">标准积分&#160;&#160;</string>
+    <string name="gspa_finish_working_pic">完成工作图片</string>
+    <string name="gspa_quality_assessment">质量考核&#160;&#160;</string>
+    <string name="hint_gspa_quality">10分制</string>
+    <string name="gspa_additional_score">困难系数&#160;&#160;</string>
+    <string name="hint_gspa_additional_score">请选择困难系数</string>
+    <string name="gspa_last_score">最后得分&#160;&#160;</string>
+    <string name="gspa_overview">综合评价</string>
+    <string name="hint_gspa_overview">请输入评价</string>
+    
+    <!--补外勤单审批-->
+    <string name="lbl_punch_person">打卡人&#160;&#160;</string>
+    <string name="lbl_punch_num">打卡单号&#160;&#160;</string>
+    <string name="lbl_punch_time">补卡时间&#160;&#160;</string>
+    <string name="working_pic">工作图片</string>
+
+    <!--查询工单-->
+    <string name="label_task_id">外勤单号</string>
+    <string name="label_work_order_detail">工单详情</string>
+
+    <!--当前任务-->
+    <string name="title_punch_card_approved">补打卡审批</string>
+    <string name="label_task_num">单号&#160;&#160;</string>
+    <string name="label_task_status1">状态&#160;&#160;</string>
+    <string name="label_punch_reason">缺考勤原因</string>
+
+    <string name="loading_tip">正在加载，请稍后……</string>
+</resources>

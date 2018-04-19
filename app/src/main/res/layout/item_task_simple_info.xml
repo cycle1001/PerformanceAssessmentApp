@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/dimen_10"
+              android:background="@drawable/full_width_btn_selector">
+
+    <TextView
+            android:id="@+id/tv_task_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_16"
+            android:textColor="@color/c_black"
+            tools:text="xxxx"/>
+
+    <TextView
+            android:id="@+id/tv_task_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_task_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/c_bbbbbb"
+            tools:text="status"/>
+
+    <TextView
+            android:id="@+id/tv_project_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_task_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_toLeftOf="@id/tv_task_status"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/c_black"
+            tools:text="xxxx"/>
+
+</RelativeLayout>

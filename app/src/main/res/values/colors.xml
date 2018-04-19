@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 通用颜色 -->
+    <color name="app_theme_background">#F3F3F3</color>
+    <color name="c_white">#FFFFFF</color>
+    <color name="c_black">#000000</color>
+    <color name="title_bar_background">#0143A3</color>
+    <color name="div_main_page">#DCDCDC</color>
+    <color name="div_listview">#DCDCDC</color>
+    <color name="c_1e1e1e">#1E1E1E</color>
+    <color name="c_e5e5e5">#E5E5E5</color>
+    <color name="c_bbbbbb">#BBBBBB</color>
+    <color name="c_bcbcbc">#BCBCBC</color>
+    <color name="c_595959">#595959</color>
+    <color name="c_f8f8f8">#F8F8F8</color>
+    <color name="c_0043a3">#0043A3</color>
+    <color name="c_8a8a8a">#8A8A8A</color>
+    <color name="c_33cc00">#33cc00</color>
+    <color name="c_23ade5">#23ADE5</color>
+
+    <!--首页-->
+    <color name="text_tab_pressed">#0043A3</color>
+    <color name="text_tab_normal">#727C8A</color>
+    <color name="text_system_notification">#1E1E1E</color>
+    <color name="text_more_normal">#8A8A8A</color>
+    <color name="text_more_pressed">#0043A3</color>
+    <color name="text_function_desc">#1E1E1E</color>
+
+    <!--登录-->
+    <color name="div_input_edit_line_pressed">#0043A3</color>
+    <color name="div_input_edit_line_normal">#BBBBBB</color>
+
+    <color name="black_50">#4D000000</color>
+</resources>

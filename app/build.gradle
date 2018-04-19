@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+
+    defaultConfig {
+        applicationId "net.performance.assessment"
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion ANDROID_TARGET_SDK_VERSION
+        versionCode 2
+        versionName "1.2.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+            manifestPlaceholders = [
+                    XG_ACCESS_ID:"2100276727",//2100250470
+                    XG_ACCESS_KEY:"AJI1BNJ6996I",//A1R8TBS289UE
+
+            ]
+        }
+    }
+
+    //重命名生成的apk
+    /*android.applicationVariants.all {
+        variant -> variant.outputs.each{
+            output ->
+                def file = output.outputFile
+                def today = new Date( ).format('MMdd');
+                output.outputFile = new File( file.parent , file.name.replace( "app-release.apk" ,
+                        "PerformanceApp V" + defaultConfig.versionName + "." +  today + ".apk" ) )
+        }
+    }*/
+
+    aaptOptions {
+        cruncherEnabled false
+    }
+
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+    buildTypes {
+        debug{
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+            zipAlignEnabled true     //Zipalign优化
+            //shrinkResources true    // 移除无用的resource文件
+
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+            zipAlignEnabled true
+
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildToolsVersion '27.0.3'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:' + ANDROID_SUPPORT_VERSION
+    implementation 'com.android.support:design:' + ANDROID_DESIGN_VERSION
+    implementation 'com.squareup.okhttp3:okhttp:' + OK_HTTP_VERSION
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation 'com.github.bumptech.glide:glide:' + GLIDE_VERSION
+    annotationProcessor 'com.github.bumptech.glide:compiler:' + GLIDE_VERSION
+    implementation 'com.google.code.gson:gson:' + GSON_VERSION
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+    implementation project(':SpinnerWheel')
+    implementation 'com.didikee:permissionsHelper:0.1.8'
+    //信鸽
+    implementation files('libs/jg_filter_sdk_1.1.jar')
+    implementation files('libs/mid-core-sdk-4.0.0.jar')
+    implementation files('libs/wup-1.0.0.E-SNAPSHOT.jar')
+    implementation files('libs/Xg_sdk_v3.2_20171211_1607.jar')
+}

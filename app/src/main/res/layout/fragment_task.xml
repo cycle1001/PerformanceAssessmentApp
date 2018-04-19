@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tool="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/c_white">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/title_attendance_management"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:text="@string/title_attendance_management"
+                        android:gravity="center_vertical"
+                        android:drawableLeft="@drawable/ic_label"
+                        android:drawableStart="@drawable/ic_label"
+                        android:textColor="@color/c_black"
+                        android:textSize="@dimen/text_14"/>
+
+                <net.performance.assessment.view.widget.NoScrollGridView
+                        android:id="@+id/attendance_grid_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_white"
+                        android:numColumns="4"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:verticalSpacing="10dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/title_task_management"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:text="@string/title_task_management"
+                        android:drawableLeft="@drawable/ic_label"
+                        android:drawableStart="@drawable/ic_label"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/c_black"
+                        android:textSize="@dimen/text_14"/>
+
+                <net.performance.assessment.view.widget.NoScrollGridView
+                        android:id="@+id/task_grid_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_white"
+                        android:numColumns="4"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:verticalSpacing="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/title_performance_management"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:text="@string/title_performance_management"
+                        android:drawableLeft="@drawable/ic_label"
+                        android:drawableStart="@drawable/ic_label"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/c_black"
+                        android:textSize="@dimen/text_14"/>
+
+                <net.performance.assessment.view.widget.NoScrollGridView
+                        android:id="@+id/performance_grid_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/c_white"
+                        android:numColumns="4"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:verticalSpacing="10dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

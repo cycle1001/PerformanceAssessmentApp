@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <View
+            android:id="@+id/blank_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#33000000"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/c_white">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+            <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/c_1e1e1e"
+                    android:textSize="18sp"/>
+
+            <TextView
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/btn_confirm"
+                    android:textColor="@color/c_0043a3"
+                    android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/c_e5e5e5"/>
+
+        <LinearLayout
+                android:id="@+id/ll_wvLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_white"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+            <antistatic.spinnerwheel.WheelVerticalView
+                    android:id="@+id/wvYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    tools:visibleItems="5"/>
+
+            <antistatic.spinnerwheel.WheelVerticalView
+                    android:id="@+id/wvMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    tools:visibleItems="5"/>
+
+            <antistatic.spinnerwheel.WheelVerticalView
+                    android:id="@+id/wvDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    tools:visibleItems="5"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="-"/>
+
+            <antistatic.spinnerwheel.WheelVerticalView
+                    android:id="@+id/wvHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    tools:visibleItems="5"/>
+
+            <antistatic.spinnerwheel.WheelVerticalView
+                    android:id="@+id/wvMinute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    tools:visibleItems="5"/>
+
+            <antistatic.spinnerwheel.WheelVerticalView
+                    android:id="@+id/wvSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                    tools:visibleItems="5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

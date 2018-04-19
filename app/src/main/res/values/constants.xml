@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="first_class_001">日常工作</string>
+    <string name="first_class_002">班组工作</string>
+    <string name="first_class_003">培训管理</string>
+    <string name="first_class_004">加分项</string>
+    <string name="first_class_005">扣分项</string>
+    <string name="first_class_006">线路维护</string>
+    <string name="first_class_999">其他</string>
+
+    <string name="id_query_month_performance_score">14</string>
+    <string name="id_query_task_score">13</string>
+
+    <string name="id_publish_task">9</string>
+    <string name="id_grab_task">12</string>
+    <string name="id_approve_for_grabbed_task">11</string>
+    <string name="id_assess_performance_for_grabbed_task">4</string>
+    <string name="id_dispatch_task">3</string>
+    <string name="id_receive_task">5</string>
+    <string name="id_assess_performance_for_received_task">7</string>
+    <string name="id_grabbed_task_finished_progress">8</string>
+    <string name="id_dispatched_task_finished_progress">6</string>
+
+    <string name="id_fieldwork_punching">1</string>
+    <string name="id_correct_fieldwork_punching">2</string>
+    <string name="id_punch_approval">10</string>
+
+</resources>

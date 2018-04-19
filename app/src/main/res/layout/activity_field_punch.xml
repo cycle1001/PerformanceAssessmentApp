@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+        android:id="@+id/custom_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_background="@drawable/btn_back_selector"
+        app:title_text="@string/label_field_punch"/>
+
+    <ScrollView style="@style/style_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20">
+
+                <TextView
+                    android:id="@+id/label_order_num"
+                    style="@style/style_8a_label"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/lbl_order_num"/>
+
+                <TextView
+                    android:id="@+id/label_check_location"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/check_location"/>
+
+                <TextView
+                    android:id="@+id/label_check_int_time"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_check_location"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/check_int_time"/>
+
+                <TextView
+                    android:id="@+id/label_punch_people"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_check_int_time"
+                    android:layout_alignRight="@+id/label_check_int_time"
+                    android:layout_alignEnd="@+id/label_check_int_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/punch_people"/>
+
+                <TextView
+                    android:id="@+id/tv_order_num"
+                    style="@style/style_1e_label"
+                    android:layout_toRightOf="@+id/label_order_num"
+                    android:layout_toEndOf="@+id/label_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    tools:text="Q0000120102012313444"/>
+
+                <TextView
+                    android:id="@+id/tv_check_location"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_order_num"
+                    android:layout_toRightOf="@+id/label_order_num"
+                    android:layout_toEndOf="@+id/label_order_num"
+                    android:layout_toLeftOf="@+id/tv_again_location"
+                    android:layout_toStartOf="@+id/tv_again_location"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:layout_marginEnd="@dimen/dimen_5"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:singleLine="true"
+                    android:ellipsize="start"
+                    android:text="@string/tip_location_loading"/>
+
+                <TextView
+                    android:id="@+id/tv_again_location"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:textColor="@color/c_0043a3"
+                    android:text="@string/lbl_again_location"
+                    android:onClick="againLocation"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"/>
+
+                <TextView
+                    android:id="@+id/tv_check_int_time"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_check_location"
+                    android:layout_toRightOf="@+id/label_order_num"
+                    android:layout_toEndOf="@+id/label_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    tools:text="2017-11-11 20:00:00"/>
+
+                <TextView
+                    android:id="@+id/tv_punch_people"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_check_int_time"
+                    android:layout_toRightOf="@+id/label_order_num"
+                    android:layout_toEndOf="@+id/label_order_num"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    tools:text="张三"/>
+
+            </RelativeLayout>
+
+            <Button
+                style="@style/style_btn"
+                android:layout_marginTop="@dimen/dimen_100"
+                android:text="@string/label_field_punch"
+                android:onClick="submitFieldPunch"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

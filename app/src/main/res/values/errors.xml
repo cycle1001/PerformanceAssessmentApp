@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_unknown">未知错误</string>
+
+    <string name="error_110900100">用户名或密码为空</string>
+    <string name="error_110900301">类对象为空</string>
+    <string name="error_110900303">派单号为空</string>
+    <string name="error_110900305">派单工作项目类型为空</string>
+
+    <string name="error_110900307">派单内容能为空</string>
+    <string name="error_110900309">派单状态为空</string>
+    <string name="error_110900311">责任人为空</string>
+    <string name="error_110900313">完成百分比为空</string>
+    <string name="error_110900315">完成时间为空</string>
+    <string name="error_110900317">完成工作图片为空</string>
+    <string name="error_110900319">质量考核分为空</string>
+    <string name="error_110900321">质量考核分为10分制,请输入有效分数</string>
+
+    <string name="error_110900323">附加得分为空</string>
+    <string name="error_110900325">附加得分为100分制,请输入有效分数</string>
+    <string name="error_110900327">最终得分为空</string>
+    <string name="error_110900329">综合评价为空</string>
+    <string name="error_110900331">未查询到派单数据</string>
+    <string name="error_110900333">派单单号被取消或不存在</string>
+</resources>

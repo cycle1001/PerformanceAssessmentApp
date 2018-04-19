@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tool="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:padding="@dimen/dimen_10"
+                android:background="@color/c_white">
+
+    <!-- 标签部分-->
+
+    <TextView
+            android:id="@+id/label_task_id"
+            style="@style/style_8a_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_task_id"/>
+
+    <TextView
+            android:id="@+id/label_task_content"
+            style="@style/style_8a_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_below="@+id/label_task_id"
+            android:text="@string/label_task_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <TextView
+            android:id="@+id/label_receiver"
+            style="@style/style_8a_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_below="@+id/label_task_content"
+            android:layout_alignRight="@+id/label_task_id"
+            android:gravity="right"
+            android:text="@string/label_receiver"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <TextView
+            android:id="@+id/label_task_status"
+            style="@style/style_8a_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_below="@+id/label_receiver"
+            android:layout_alignRight="@+id/label_task_id"
+            android:gravity="right"
+            android:text="@string/label_task_status"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <!---内容-->
+
+    <TextView
+            android:id="@+id/tv_task_id"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/label_task_id"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tool:text="@string/default_label"/>
+
+    <TextView
+            android:id="@+id/tv_task_content"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/label_task_content"
+            android:layout_below="@+id/tv_task_id"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tool:text="@string/default_label"/>
+
+    <TextView
+            android:id="@+id/tv_receiver"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/label_receiver"
+            android:layout_below="@+id/tv_task_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tool:text="@string/default_label"/>
+
+    <TextView
+            android:id="@+id/tv_task_status"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@+id/label_task_status"
+            android:layout_below="@+id/tv_receiver"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tool:text="@string/default_label"/>
+
+</RelativeLayout>

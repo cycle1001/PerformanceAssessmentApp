@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_90">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_home_header"
+                    android:scaleType="fitXY"/>
+
+            </RelativeLayout>
+
+            <net.performance.assessment.view.widget.NoScrollGridView
+                android:id="@+id/function_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_white"
+                android:numColumns="4"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:verticalSpacing="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/label_publish_task_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:text="发布单动态:"
+                            android:textColor="@color/c_black"
+                            android:textSize="@dimen/text_16" />
+
+                    <ProgressBar
+                            android:id="@+id/publish_progress_bar"
+                            android:layout_width="@dimen/dimen_20"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:layout_alignParentRight="true"/>
+
+                    <net.performance.assessment.view.widget.NoScrollListView
+                            android:id="@+id/publish_task_list_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/label_publish_task_title"
+                            android:numColumns="4"
+                            android:verticalSpacing="1dp" />
+
+                    <TextView
+                            android:id="@+id/tv_publish_tips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:background="@color/c_white"
+                            android:layout_below="@+id/label_publish_task_title"
+                            android:textColor="@color/c_bbbbbb"
+                            android:textSize="@dimen/text_14"
+                            android:text="@string/tips_empty"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/label_dispatch_task_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:text="任务单动态:"
+                            android:textColor="@color/c_black"
+                            android:textSize="@dimen/text_16" />
+
+                    <ProgressBar
+                            android:id="@+id/dispatch_progress_bar"
+                            android:layout_width="@dimen/dimen_20"
+                            android:layout_height="@dimen/dimen_20"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginRight="@dimen/dimen_10"
+                            android:layout_alignParentRight="true"/>
+
+                    <net.performance.assessment.view.widget.NoScrollListView
+                            android:id="@+id/dispatch_task_list_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/label_dispatch_task_title"
+                            android:verticalSpacing="1dp" />
+
+                    <TextView
+                            android:id="@+id/tv_dispatch_tips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:background="@color/c_white"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/label_dispatch_task_title"
+                            android:textColor="@color/c_bbbbbb"
+                            android:textSize="@dimen/text_14"
+                            android:text="@string/tips_empty"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

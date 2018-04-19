@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+        android:id="@+id/custom_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_background="@drawable/btn_back_selector"
+        app:title_text="@string/grab_single_performance_appraisal" />
+
+    <ScrollView style="@style/style_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_8a_label"
+                    android:text="@string/gspa_post_single_num" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_post_single_num"
+                    style="@style/style_1e_label"
+                    tools:text="JXT20171111" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/gspa_work_item_type" />
+
+            <TextView
+                android:id="@+id/tv_gspa_work_item_type"
+                style="@style/style_1e_label"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                tools:text="机电检修" />
+
+            <TextView
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/gspa_publish_content" />
+
+            <TextView
+                android:id="@+id/tv_gspa_publish_content"
+                style="@style/style_1e_label"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                tools:text="机电检修" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/label_gspa_release_time"
+                    style="@style/style_8a_label"
+                    android:text="@string/gspa_release_time" />
+
+                <TextView
+                    android:id="@+id/label_gspa_publisher"
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/label_gspa_release_time"
+                    android:layout_alignRight="@+id/label_gspa_release_time"
+                    android:layout_below="@+id/label_gspa_release_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_publisher" />
+
+                <TextView
+                    android:id="@+id/label_gspa_status"
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/label_gspa_release_time"
+                    android:layout_alignRight="@+id/label_gspa_release_time"
+                    android:layout_below="@+id/label_gspa_publisher"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gs_status" />
+
+                <TextView
+                    android:id="@+id/label_gspa_grab_single_time"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_gspa_status"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_grab_single_time" />
+
+                <TextView
+                    android:id="@+id/label_gspa_grab_single_person"
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/label_gspa_release_time"
+                    android:layout_alignRight="@+id/label_gspa_release_time"
+                    android:layout_below="@+id/label_gspa_grab_single_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_grab_single_person" />
+
+                <TextView
+                    android:id="@+id/label_grab_single_position"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_gspa_grab_single_person"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_grab_single_position" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_release_time"
+                    style="@style/style_1e_label"
+                    android:layout_toEndOf="@+id/label_gspa_release_time"
+                    android:layout_toRightOf="@+id/label_gspa_release_time"
+                    tools:text="2017-11-11 08:00:00" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_publisher"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_gspa_release_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_release_time"
+                    android:layout_toRightOf="@+id/label_gspa_release_time"
+                    tools:text="王五" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_status"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_gspa_publisher"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_release_time"
+                    android:layout_toRightOf="@+id/label_gspa_release_time"
+                    android:text="@string/gspa_published" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_grab_single_time"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_gspa_status"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_release_time"
+                    android:layout_toRightOf="@+id/label_gspa_release_time"
+                    tools:text="2017-11-11 08:10:00" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_grab_single_person"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_gspa_grab_single_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_release_time"
+                    android:layout_toRightOf="@+id/label_gspa_release_time"
+                    tools:text="赵六" />
+
+                <TextView
+                    android:id="@+id/tv_gspa_grab_single_position"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/label_gspa_grab_single_person"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_release_time"
+                    android:layout_toRightOf="@+id/label_gspa_release_time"
+                    android:ellipsize="start"
+                    android:singleLine="true"
+                    tools:text="广州市天河区" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/gspa_participant" />
+
+            <TextView
+                android:id="@+id/et_gspa_participant"
+                style="@style/style_1e_label"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                tools:text="张三、李四、王五" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/label_gspa_complete_percentage"
+                    style="@style/style_8a_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gspa_complete_percentage" />
+
+                <TextView
+                    android:id="@+id/label_gspa_complete_time"
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/label_gspa_complete_percentage"
+                    android:layout_alignRight="@+id/label_gspa_complete_percentage"
+                    android:layout_below="@+id/label_gspa_complete_percentage"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_complete_time" />
+
+                <TextView
+                    style="@style/style_8a_label"
+                    android:layout_alignEnd="@+id/label_gspa_complete_percentage"
+                    android:layout_alignRight="@+id/label_gspa_complete_percentage"
+                    android:layout_below="@+id/label_gspa_complete_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_standard_points" />
+
+                <TextView
+                    android:id="@+id/et_gspa_complete_percentage"
+                    style="@style/style_1e_label"
+                    android:layout_toEndOf="@+id/label_gspa_complete_percentage"
+                    android:layout_toRightOf="@+id/label_gspa_complete_percentage"
+                    tools:text="80" />
+
+                <TextView
+                    android:id="@+id/et_gspa_complete_time"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/et_gspa_complete_percentage"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_complete_percentage"
+                    android:layout_toRightOf="@+id/label_gspa_complete_percentage"
+                    tools:text="2017-11-12 09:00:00" />
+
+                <TextView
+                    android:id="@+id/et_gspa_standard_points"
+                    style="@style/style_1e_label"
+                    android:layout_below="@+id/et_gspa_complete_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_complete_percentage"
+                    android:layout_toRightOf="@+id/label_gspa_complete_percentage"
+                    tools:text="1.0" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/style_8a_label"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:text="@string/gsp_finish_working_pic" />
+
+            <ImageView
+                android:id="@+id/iv_gspa_finish_working_pic"
+                android:layout_width="@dimen/dimen_200"
+                android:layout_height="@dimen/dimen_200"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:background="@drawable/ic_default_pic"
+                android:scaleType="fitCenter"
+                android:contentDescription="@null" />
+
+            <RelativeLayout
+                    android:id="@+id/rl_assessement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/label_gspa_quality_assessment"
+                    style="@style/style_8a_label"
+                    android:layout_alignBottom="@+id/ll_et_gspa_quality_assessment"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:text="@string/gspa_quality_assessment" />
+
+                <TextView
+                    android:id="@+id/label_gspa_additional_score"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_gspa_quality_assessment"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="@string/gspa_additional_score" />
+
+                <TextView
+                    android:id="@+id/label_gspa_last_score"
+                    style="@style/style_8a_label"
+                    android:layout_below="@+id/label_gspa_additional_score"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="@string/gspa_last_score" />
+
+                <LinearLayout
+                    android:id="@+id/ll_et_gspa_quality_assessment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/label_gspa_quality_assessment"
+                    android:layout_toRightOf="@+id/label_gspa_quality_assessment"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_gspa_quality_assessment"
+                        style="@style/style_login_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:hint="@string/hint_gspa_quality"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:textSize="@dimen/text_16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/div_input_edit_line_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_et_gspa_additional_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/label_gspa_quality_assessment"
+                    android:layout_toRightOf="@+id/label_gspa_quality_assessment"
+                    android:layout_below="@+id/ll_et_gspa_quality_assessment"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/et_gspa_additional_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_6"
+                        android:entries="@array/difficult_coefficient"
+                        android:textSize="@dimen/text_16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/div_input_edit_line_normal"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/et_gspa_last_score"
+                    style="@style/style_login_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_et_gspa_additional_score"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_toEndOf="@+id/label_gspa_quality_assessment"
+                    android:layout_toRightOf="@+id/label_gspa_quality_assessment"
+                    android:layout_alignBottom="@+id/label_gspa_last_score"
+                    android:inputType="numberDecimal"
+                    tools:text="89"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/et_gspa_last_score"
+                    android:layout_toRightOf="@+id/label_gspa_quality_assessment"
+                    android:background="@color/div_input_edit_line_normal" />
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/label_gspa_overview"
+                style="@style/style_8a_label"
+                android:text="@string/gspa_overview"
+                android:layout_marginTop="@dimen/dimen_15"/>
+
+            <EditText
+                android:id="@+id/et_gspa_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/style_login_edit_text"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:maxLength="200"
+                android:hint="@string/hint_gspa_overview"
+                android:textSize="@dimen/text_16" />
+
+            <View
+                    android:id="@+id/underline"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/div_input_edit_line_normal"/>
+
+            <Button
+                android:id="@+id/btn_gspa_submit"
+                style="@style/style_btn"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginBottom="@dimen/dimen_40"
+                android:text="@string/btn_submit" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

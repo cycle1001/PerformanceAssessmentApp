@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tool="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+            android:id="@+id/custom_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_background="@drawable/btn_back_selector"
+            app:title_text="@string/title_query_task_score"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/label_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_18"
+                    android:textColor="@color/c_8a8a8a"
+                    tool:text="start_date"
+                    android:text="@string/label_start_date"/>
+
+            <TextView
+                    android:id="@+id/tv_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_toRightOf="@+id/label_start_date"
+                    android:drawableRight="@drawable/ic_select_tip"
+                    android:drawableEnd="@drawable/ic_select_tip"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_5"
+                    android:hint="@string/hint_input_start_date"
+                    android:textColorHint="@color/c_bbbbbb"
+                    android:gravity="center"
+                    tool:text=""
+                    android:textSize="@dimen/text_18"
+                    android:textColor="@color/c_black"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/tv_start_date"
+                    android:layout_toRightOf="@+id/label_start_date"
+                    android:background="@color/div_input_edit_line_normal" />
+
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/label_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_18"
+                    android:textColor="@color/c_8a8a8a"
+                    tool:text="end_date"
+                    android:text="@string/label_end_date"/>
+
+            <TextView
+                    android:id="@+id/tv_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/label_end_date"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:drawableRight="@drawable/ic_select_tip"
+                    android:drawableEnd="@drawable/ic_select_tip"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_5"
+                    android:gravity="center"
+                    tool:text=""
+                    android:textColorHint="@color/c_bbbbbb"
+                    android:hint="@string/hint_input_end_date"
+                    android:textSize="@dimen/text_18"
+                    android:textColor="@color/c_black"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/tv_end_date"
+                    android:layout_toRightOf="@id/label_end_date"
+                    android:background="@color/div_input_edit_line_normal" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+            <TextView
+                    android:id="@+id/label_total_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    tool:text="total_score"
+                    android:textColor="@color/c_8a8a8a"
+                    android:textSize="@dimen/text_18"
+                    android:text="@string/label_total_score"/>
+
+            <TextView
+                    android:id="@+id/tv_total_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:textColor="@color/c_1e1e1e"
+                    android:textSize="@dimen/text_18"
+                    android:layout_toRightOf="@+id/label_total_score"
+                    tool:text="@string/default_label"/>
+
+        </RelativeLayout>
+
+        <Button
+                android:id="@+id/btn_query"
+                android:layout_width="@dimen/dimen_70"
+                android:layout_height="@dimen/dimen_30"
+                android:background="@drawable/btn_bg_selector"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/c_white"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dimen_5"
+                tool:text="query"
+                android:text="@string/btn_query"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_10"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_10"
+                android:paddingBottom="@dimen/dimen_10"
+                tool:text="任务详情"
+                android:textColor="@color/c_8a8a8a"
+                android:textSize="@dimen/text_20"
+                android:text="@string/label_task_detail"/>
+
+        <ListView
+                android:id="@+id/score_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:verticalSpacing="1dp"
+                style="@style/style_listview_with_spacing"/>
+
+    </LinearLayout>
+
+</LinearLayout>

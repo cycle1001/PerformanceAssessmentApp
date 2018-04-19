@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+        android:id="@+id/custom_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_background="@drawable/btn_back_selector"
+        app:title_text="@string/title_grab_single_approval" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10"
+        android:background="@drawable/shape_gray_bg" />
+
+    <ScrollView style="@style/style_scroll_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_post_single_num"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_post_single_num"
+                    style="@style/style_1e_label"
+                    tools:text="JXT20171111"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_8a_label"
+                android:text="@string/gsa_work_item_type"
+                android:layout_marginTop="@dimen/dimen_15"/>
+
+            <TextView
+                android:id="@+id/tv_gsa_work_item_type"
+                style="@style/style_1e_label"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                tools:text="机电检修"/>
+
+            <TextView
+                style="@style/style_8a_label"
+                android:text="@string/gsa_publish_content"
+                android:layout_marginTop="@dimen/dimen_15"/>
+
+            <TextView
+                android:id="@+id/tv_gsa_publish_content"
+                style="@style/style_1e_label"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                tools:text="机电检修"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15">
+
+                <TextView
+                    android:id="@+id/label_gsa_release_time"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/label_gsa_publisher"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_publisher"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_release_time"
+                    android:layout_alignRight="@+id/label_gsa_release_time"
+                    android:layout_alignEnd="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/label_gsa_status"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_status"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_publisher"
+                    android:layout_alignRight="@+id/label_gsa_release_time"
+                    android:layout_alignEnd="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/label_gsa_grab_single_time"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_grab_single_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_status"/>
+
+                <TextView
+                    android:id="@+id/label_gsa_grab_single_person"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_grab_single_person"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_grab_single_time"
+                    android:layout_alignRight="@+id/label_gsa_release_time"
+                    android:layout_alignEnd="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/label_gsa_grab_single_position"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_grab_single_position"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_grab_single_person"/>
+
+                <TextView
+                    android:id="@+id/label_processing_time"
+                    style="@style/style_8a_label"
+                    android:text="@string/processing_time"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_grab_single_position"/>
+
+                <TextView
+                    android:id="@+id/label_gsa_approver"
+                    style="@style/style_8a_label"
+                    android:text="@string/gsa_approver"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_processing_time"
+                    android:layout_alignRight="@+id/label_gsa_release_time"
+                    android:layout_alignEnd="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_release_time"
+                    style="@style/style_1e_label"
+                    tools:text="2017-11-11 08:00:00"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_publisher"
+                    style="@style/style_1e_label"
+                    tools:text="王五"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_release_time"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_status"
+                    style="@style/style_1e_label"
+                    android:text="@string/gsa_published"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_publisher"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_grab_single_time"
+                    style="@style/style_1e_label"
+                    tools:text="2017-11-11 08:10:00"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_status"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_grab_single_person"
+                    style="@style/style_1e_label"
+                    tools:text="赵六"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_grab_single_time"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_grab_single_position"
+                    style="@style/style_1e_label"
+                    tools:text="广州市天河区"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/label_gsa_grab_single_person"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"
+                    android:singleLine="true"
+                    android:ellipsize="start"/>
+
+                <TextView
+                    android:id="@+id/tv_processing_time"
+                    style="@style/style_1e_label"
+                    tools:text="2017-11-11 08:20:00"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/tv_gsa_grab_single_position"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+                <TextView
+                    android:id="@+id/tv_gsa_approver"
+                    style="@style/style_1e_label"
+                    tools:text="王五"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:layout_below="@+id/tv_processing_time"
+                    android:layout_toRightOf="@+id/label_gsa_release_time"
+                    android:layout_toEndOf="@+id/label_gsa_release_time"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/btn_operation_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginBottom="@dimen/dimen_30">
+
+                <Button
+                    android:id="@+id/btn_gsa_agree"
+                    style="@style/style_btn"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dimen_30"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:layout_marginEnd="@dimen/dimen_10"
+                    android:onClick="agreeCommit"
+                    android:text="@string/btn_agree"/>
+
+                <Button
+                    android:id="@+id/btn_gsa_no_agree"
+                    style="@style/style_btn_cancel"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_30"
+                    android:onClick="disagreeCommit"
+                    android:text="@string/btn_no_agree"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tool="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+          android:padding="@dimen/dimen_10"
+        android:background="@color/c_white">
+
+    <TextView
+            android:id="@+id/label_task_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="Content"
+            style="@style/style_8a_label"
+            android:text="@string/label_project_content"/>
+
+    <TextView
+            android:id="@+id/tv_task_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/style_1e_label"
+            android:maxLines="2"
+            android:layout_toRightOf="@+id/label_task_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="123748927482937489237482397842930842930849230849328493028490237489237489327423"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/label_finished_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="Finished Time"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/dimen_10"
+                style="@style/style_8a_label"
+                android:text="@string/label_finished_time"/>
+
+        <TextView
+                android:id="@+id/tv_finished_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/style_1e_label"
+                android:layout_toRightOf="@+id/label_finished_time"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:text="@string/default_label"/>
+
+        <TextView
+                android:id="@+id/tv_task_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                style="@style/style_1e_label"
+                android:layout_alignParentRight="true"
+                android:text="@string/default_label"/>
+
+        <TextView
+                android:id="@+id/label_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                tool:text="score"
+                android:layout_toLeftOf="@+id/tv_task_score"
+                style="@style/style_8a_label"
+                android:text="@string/label_score"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

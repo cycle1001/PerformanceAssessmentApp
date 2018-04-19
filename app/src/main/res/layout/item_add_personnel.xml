@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+    <View
+            android:layout_width="@dimen/dimen_40"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_gray_round"/>
+
+    <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/dimen_20"
+            android:layout_height="@dimen/dimen_20"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_add_personnel"/>
+
+</RelativeLayout>

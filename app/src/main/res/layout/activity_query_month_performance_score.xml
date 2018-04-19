@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tool="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <net.performance.assessment.view.widget.CustomTitleBar
+            android:id="@+id/custom_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_background="@drawable/btn_back_selector"
+            app:title_text="@string/label_query_month_performance_score"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_60"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_15">
+
+        <TextView
+                android:id="@+id/label_query_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/text_16"
+                android:textColor="@color/c_8a8a8a"
+                android:text="@string/label_query_month"/>
+
+        <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/label_query_month"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_centerVertical="true"
+                android:drawableRight="@drawable/ic_select_tip"
+                android:drawableEnd="@drawable/ic_select_tip"
+                android:drawablePadding="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_5"
+                android:textColorHint="@color/c_bbbbbb"
+                android:hint="@string/hint_input_target_date"
+                android:gravity="center"
+                tool:text=""
+                android:textSize="@dimen/text_18"
+                android:textColor="@color/c_black"/>
+
+        <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_date"
+                android:layout_alignLeft="@+id/tv_date"
+                android:layout_alignRight="@+id/tv_date"
+                android:background="@color/div_input_edit_line_normal" />
+
+        <Button
+                android:id="@+id/btn_query"
+                android:layout_width="@dimen/dimen_80"
+                android:layout_height="@dimen/dimen_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_bg_selector"
+                android:gravity="center"
+                android:textColor="@color/c_white"
+                android:textSize="@dimen/text_14"
+                android:text="@string/btn_query"/>
+
+    </RelativeLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tool:text="得分详情"
+            android:paddingLeft="@dimen/dimen_15"
+            android:textColor="@color/c_black"
+            android:textSize="@dimen/text_20"
+            android:text="@string/label_score_detail"
+            android:visibility="gone"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:orientation="horizontal"
+            android:background="@color/c_23ade5">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/c_white"
+                android:textSize="@dimen/text_16"
+                android:gravity="center"
+                android:text="@string/label_this_month_task_score"/>
+
+        <View
+                android:layout_width="0.5px"
+                android:layout_height="fill_parent"
+                android:background="@color/c_white"
+                android:visibility="visible" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/c_white"
+                android:textSize="@dimen/text_16"
+                android:gravity="center"
+                android:text="@string/label_overview_score"/>
+
+        <View
+                android:layout_width="0.5px"
+                android:layout_height="fill_parent"
+                android:background="@color/c_white"
+                android:visibility="visible" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:textColor="@color/c_white"
+                android:textSize="@dimen/text_16"
+                android:gravity="center"
+                android:text="@string/label_departmental_score"/>
+
+        <View
+                android:layout_width="0.5px"
+                android:layout_height="fill_parent"
+                android:background="@color/c_white"
+                android:visibility="visible" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:textColor="@color/c_white"
+                android:textSize="@dimen/text_16"
+                android:gravity="center"
+                android:text="@string/label_final_score"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_5"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingRight="@dimen/dimen_15"
+            android:visibility="gone">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/c_black"
+                android:text="@string/label_this_month_task_score"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/c_black"
+                android:text="@string/label_overview_score"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/c_black"
+                android:text="@string/label_departmental_score"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/c_black"
+                android:text="@string/label_final_score"/>
+
+    </LinearLayout>
+    
+    <ListView
+            android:id="@+id/score_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/style_listview_with_spacing"
+            android:verticalSpacing="1dp"
+            android:scrollbars="none"/>
+
+</LinearLayout>

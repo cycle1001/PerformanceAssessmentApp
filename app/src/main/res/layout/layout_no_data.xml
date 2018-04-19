@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_no_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_no_data"
+        android:contentDescription="@null"
+        />
+
+    <TextView
+        style="@style/style_8a_label"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:text="暂无数据"/>
+
+</LinearLayout>

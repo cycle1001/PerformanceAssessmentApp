@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_10"
+                android:paddingBottom="@dimen/dimen_10"
+                android:background="@drawable/full_width_btn_selector">
+
+    <TextView
+            android:id="@+id/tv_task_score"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_alignParentRight="true"
+            tools:text="10.0"/>
+
+    <TextView
+            android:id="@+id/tv_task_content"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_task_score"
+            android:lines="1"
+            android:ellipsize="end"
+            tools:text="12323487820398403298423432894793287489324"/>
+
+    <TextView
+            android:id="@+id/tv_create_date"
+            style="@style/style_1e_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_task_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_10"
+            tools:text="2017-12-07"/>
+
+    <TextView
+            android:id="@+id/tv_task_status"
+            style="@style/style_8a_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_task_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_alignParentRight="true"
+            tools:text="发布中"/>
+
+</RelativeLayout>

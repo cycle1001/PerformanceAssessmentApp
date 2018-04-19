@@ -1,0 +1,452 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.performance.assessment">
+
+    <!--百度定位权限-->
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--END-->
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 【常用】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+            android:name="net.performance.assessment.common.BaseApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:persistent="true">
+
+        <!--信鸽-->
+
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver android:name="com.tencent.android.tpush.XGPushReceiver"
+                  android:process=":xg_service_v3" >
+            <intent-filter android:priority="0x7fffffff" >
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理-->
+        <activity
+                android:name="com.tencent.android.tpush.XGPushActivity"
+                android:exported="false" >
+            <intent-filter>
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action"-->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+                android:name="com.tencent.android.tpush.service.XGPushServiceV3"
+                android:exported="true"
+                android:persistent="true"
+                android:process=":xg_service_v3" />
+
+        <!-- 【必须】 提高service的存活率 -->
+        <service
+                android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+                android:exported="true">
+            <intent-filter>
+                <!-- 【必须】 请修改为当前APP包名 .PUSH_ACTION, 如demo的包名为：com.qq.xgdemo -->
+                <action android:name="net.performance.assessment.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 【必须】 【注意】authorities修改为 包名.AUTH_XGPUSH, 如demo的包名为：com.qq.xgdemo-->
+        <provider
+                android:name="com.tencent.android.tpush.XGPushProvider"
+                android:authorities="net.performance.assessment.AUTH_XGPUSH"
+                android:exported="true"/>
+
+        <!-- 【必须】 【注意】authorities修改为 包名.TPUSH_PROVIDER, 如demo的包名为：com.qq.xgdemo-->
+        <provider
+                android:name="com.tencent.android.tpush.SettingsContentProvider"
+                android:authorities="net.performance.assessment.TPUSH_PROVIDER"
+                android:exported="false" />
+
+        <!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V3, 如demo的包名为：com.qq.xgdemo-->
+        <provider
+                android:name="com.tencent.mid.api.MidProvider"
+                android:authorities="net.performance.assessment.TENCENT.MID.V3"
+                android:exported="true" >
+        </provider>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+                android:name="XG_V2_ACCESS_ID"
+                android:value="2100276727" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+                android:name="XG_V2_ACCESS_KEY"
+                android:value="AJI1BNJ6996I" />
+
+        <!-- YOUR_PACKAGE_PATH.CustomPushReceiver需要改为自己的Receiver： -->
+        <receiver android:name=".receiver.CustomMessageReceiver"
+                  android:exported="true" >
+            <intent-filter>
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+        <!---->
+
+        <!--Glide-->
+        <meta-data
+            android:name="net.performance.assessment.network.image.CustomGlideModule"
+            android:value="GlideModule" />
+
+        <!--百度地图定位-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="kM2tB3X7s4wTVebW32LeBPn8vkhbU55i"></meta-data>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2"></action>
+            </intent-filter>
+        </service>
+        <!--END-->
+
+        <!--<activity
+                android:name="net.performance.assessment.view.activity.WelcomeActivity"
+                android:exported="true"
+                android:launchMode="standard"
+                android:screenOrientation="portrait"
+                android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+-->
+        <service android:name=".service.AppInitializeService">
+            <intent-filter>
+                <action android:name="com.tecsun.henan.online.service.action.INIT"/>
+            </intent-filter>
+        </service>
+
+       <!-- <activity
+                android:name="net.performance.assessment.view.activity.MainActivity"
+                android:exported="true"
+                android:launchMode="standard"
+                android:screenOrientation="portrait"/>-->
+
+        <activity
+            android:name="net.performance.assessment.view.activity.MainActivity"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--保活配置-->
+        <activity android:name=".view.activity.KeepLiveActivity"
+                  android:configChanges="keyboardHidden|orientation"
+                  android:excludeFromRecents="true"
+                  android:exported="false"
+                  android:finishOnTaskLaunch="false"
+                  android:launchMode="singleInstance"
+                  android:theme="@style/live_activity_style"/>
+        <service android:name=".service.KeepLiveService"/>
+        <service android:name=".service.SecondService"/>
+
+        <!-- ImagePicker 相关配置 -->
+        <activity
+            android:name="com.linchaolong.android.imagepicker.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+                android:name="net.performance.assessment.view.activity.QueryWorkOrderActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:exported="false"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+                android:name="net.performance.assessment.view.activity.WorkOrderDetailActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:exported="false"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryTaskScoreActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+                android:name="net.performance.assessment.view.activity.QueryMonthPerformanceScoreActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:exported="false"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.MyTaskListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.MyReceivedTaskListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.SelectPersonnelActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.AddDirectorTestActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.DispatchingTaskListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.UpdateDispatchedTaskProgressActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.DispatchTaskActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.ReceiveTaskActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.DispatchPerformanceAssessmentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.EmployeePerformanceAssessmentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.DepartmentalPerformanceAssessmentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryPerformanceActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.ChangePwdActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.FieldPunchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.MakeUpCardApplicationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.ReleaseListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.GrabSingleActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.GrabSingleApprovalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.GrabSingleProgressActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.GrabSinglePerformanceAppraisalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.SelectWorkItemTypeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryReleaseListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryGrabSingleActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryProcessingGrabSingleActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryAssessedGrabSingleActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.QueryPersonUnsignActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.ClassPersonSelectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.ShowPicActivity"
+            android:theme="@style/StatusBarTranslucent"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.CardApprovalListActivity"
+            android:theme="@style/StatusBarTranslucent"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="net.performance.assessment.view.activity.CardApprovalActivity"
+            android:theme="@style/StatusBarTranslucent"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+    </application>
+
+</manifest>
