@@ -195,7 +195,8 @@ public class QueryTaskScoreActivity extends BaseActivity
                     {
                         totalScore += info.finalScore;
                     }
-                    tvTotalScore.setText( String.valueOf( totalScore ) );
+
+                    tvTotalScore.setText( String.format( "%.2f" , totalScore ) );
                 }
                 else {
                     tvTotalScore.setText( "0" );

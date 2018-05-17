@@ -142,7 +142,7 @@ public class CustomDatePicker
         mYearWheel = ( AbstractWheel ) contentView.findViewById( R.id.wvYear );
         Calendar calendar = Calendar.getInstance( );
         int currentYear = calendar.get( Calendar.YEAR );
-        //String thisMonth = calendar.get( Calendar.MONTH );
+
         if ( startYear <= 0 && endYear <= 0 )
         {
             startYear = currentYear - 150;
@@ -157,6 +157,10 @@ public class CustomDatePicker
             if ( endYear > 0 && startYear <= 0  )
             {
                 startYear = currentYear - 150;
+            }
+            else {
+                thisYear = currentYear;
+                thisMonth = calendar.get( Calendar.MONTH ) + 1;
             }
         }
         AbstractWheelTextAdapter yearAdapter = new NumericWheelAdapter( mContext , startYear, endYear );
