@@ -116,6 +116,7 @@ public class DispatchTaskActivity extends BaseActivity
             if ( position == mDirectorList.size( ) - 1 )
             {
                 Intent intent = new Intent( mContext, SelectPersonnelActivity.class );
+                intent.putExtra("hideName", tvDispatcher.getText().toString().trim());
                 startActivityForResult( intent , REQ_SELECT_DIRECTOR );
             }
             else {

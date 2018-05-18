@@ -154,6 +154,7 @@ public class GrabSingleProgressActivity extends BaseActivity {
 
             case R.id.et_gsp_participant:
                 Intent intent1 = new Intent(this, ClassPersonSelectActivity.class);
+                intent1.putExtra("hideName", mTvGspPerson.getText().toString().trim());
                 startActivityForResult(intent1, 100);
                 break;
 

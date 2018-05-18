@@ -22,6 +22,7 @@ import android.widget.ListView;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -40,6 +41,8 @@ public class SelectPersonnelActivity extends BaseActivity {
 
     private long selectPersonnelFlag;
 
+    private String mHideName = "";
+
     @Override
     protected void setContentView() {
         super.setContentView();
@@ -49,6 +52,10 @@ public class SelectPersonnelActivity extends BaseActivity {
     @Override
     protected void initView() {
         super.initView();
+        if (getIntent() != null) {
+            mHideName = getIntent().getStringExtra("hideName");
+        }
+
         lvDepartment = ViewUtils.xFindViewById(this, R.id.department_list_view);
         lvPersonnel = ViewUtils.xFindViewById(this, R.id.personnel_list_view);
     }
@@ -112,8 +119,16 @@ public class SelectPersonnelActivity extends BaseActivity {
                 PersonnelSimpleInfoListBean bean = JsonParser.getInstance().getBeanFromJsonString(
                         result, PersonnelSimpleInfoListBean.class);
                 if (bean.data != null && bean.data.size() > 0) {
+                    List<PersonnelSimpleInfo> list = bean.data;
+                    Iterator<PersonnelSimpleInfo> iterator = list.iterator();
+                    while (iterator.hasNext()) {
+                        PersonnelSimpleInfo info = iterator.next();
+                        if (info.name.equals(mHideName)) {
+                            iterator.remove();
+                        }
+                    }
                     mDepartmentInfos.clear();
-                    mDepartmentInfos.addAll(bean.data);
+                    mDepartmentInfos.addAll(list);
                     mDepartmentInfoAdapter.notifyDataSetChanged();
 
                     //saveResult( result );

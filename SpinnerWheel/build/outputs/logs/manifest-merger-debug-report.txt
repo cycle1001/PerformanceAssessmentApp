@@ -1,47 +1,47 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
 	package
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:4:11-44
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:4:11-44
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:3:11-57
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:3:11-57
 	android:versionCode
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:1-13:12
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:6:5-11:19
+ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:6:5-11:19
 	android:supportsRtl
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:8:13-39
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:8:13-39
 	tools:overrideLibrary
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:9:13-65
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:9:13-65
 	android:allowBackup
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:7:13-39
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml:7:13-39
 uses-sdk
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidStudioProjects\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioWorkspace\PerformanceAssessmentApp\SpinnerWheel\src\main\AndroidManifest.xml
