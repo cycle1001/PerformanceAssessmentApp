@@ -247,7 +247,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dimen_10"
                 android:layout_marginLeft="@dimen/dimen_15"
-                android:background="@drawable/ic_default_pic"
                 android:scaleType="fitCenter"
                 android:contentDescription="@null" />
 
