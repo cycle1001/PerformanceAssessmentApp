@@ -58,7 +58,7 @@ public class QueryReleaseListActivity extends BaseActivity implements AdapterVie
 
     private void queryReleaseList() {
         showProgressDialog("");
-        queryFlag = ReleaseListTaskAPI.queryReleaseList("", "", "001", mHttpCallback);
+        queryFlag = ReleaseListTaskAPI.queryReleaseList("", "", "002", mHttpCallback);
     }
 
     @Override

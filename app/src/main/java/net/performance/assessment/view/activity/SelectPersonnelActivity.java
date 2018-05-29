@@ -23,6 +23,7 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -44,6 +45,8 @@ public class SelectPersonnelActivity extends BaseActivity {
 
     private long selectPersonnelFlag;
 
+    private String mHideName = "";
+
     @Override
     protected void setContentView() {
         super.setContentView();
@@ -53,7 +56,15 @@ public class SelectPersonnelActivity extends BaseActivity {
     @Override
     protected void initView() {
         super.initView();
+<<<<<<< HEAD
         //lvDepartment = ViewUtils.xFindViewById(this, R.id.department_list_view);
+=======
+        if (getIntent() != null) {
+            mHideName = getIntent().getStringExtra("hideName");
+        }
+
+        lvDepartment = ViewUtils.xFindViewById(this, R.id.department_list_view);
+>>>>>>> cb547a09c7bde954f6ad7d9c049d4511a27e8876
         lvPersonnel = ViewUtils.xFindViewById(this, R.id.personnel_list_view);
         btnCheck = ViewUtils.xFindViewById(this, R.id.btn_select_confirm);
     }
@@ -124,10 +135,26 @@ public class SelectPersonnelActivity extends BaseActivity {
                 PersonnelSimpleInfoListBean bean = JsonParser.getInstance().getBeanFromJsonString(
                         result, PersonnelSimpleInfoListBean.class);
                 if (bean.data != null && bean.data.size() > 0) {
+<<<<<<< HEAD
                     mPersonnelSimpleInfos.clear();
                     mPersonnelSimpleInfos.addAll(bean.data);
                     mPersonnelInfoAdapter.initData();
                     mPersonnelInfoAdapter.notifyDataSetChanged();
+=======
+                    List<PersonnelSimpleInfo> list = bean.data;
+                    Iterator<PersonnelSimpleInfo> iterator = list.iterator();
+                    while (iterator.hasNext()) {
+                        PersonnelSimpleInfo info = iterator.next();
+                        if (info.name.equals(mHideName)) {
+                            iterator.remove();
+                        }
+                    }
+                    mDepartmentInfos.clear();
+                    mDepartmentInfos.addAll(list);
+                    mDepartmentInfoAdapter.notifyDataSetChanged();
+
+                    //saveResult( result );
+>>>>>>> cb547a09c7bde954f6ad7d9c049d4511a27e8876
                 }
             } else {
                 ToastUtil.showErrorMessage(mContext, detectedBean.message, detectedBean.errorCode);

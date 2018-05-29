@@ -18,6 +18,7 @@ import net.performance.assessment.utils.ToastUtil;
 import net.performance.assessment.view.adapter.SelectClassPersonAdapter;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ClassPersonSelectActivity extends BaseActivity implements AdapterView.OnItemClickListener {
@@ -29,6 +30,8 @@ public class ClassPersonSelectActivity extends BaseActivity implements AdapterVi
 
     private List<PersonnelSimpleInfo> mInfoList;
     private long selectPersonnelFlag;
+
+    private String mHideName = "";
 
     @Override
     protected void setContentView() {
@@ -46,7 +49,9 @@ public class ClassPersonSelectActivity extends BaseActivity implements AdapterVi
     @Override
     protected void initData() {
         super.initData();
-
+        if (getIntent() != null) {
+            mHideName = getIntent().getStringExtra("hideName");
+        }
         showProgressDialog("");
         selectPersonnelFlag = CommonAPI.findUsers("", "", mHttpCallback);
     }
@@ -139,6 +144,13 @@ public class ClassPersonSelectActivity extends BaseActivity implements AdapterVi
                         result, PersonnelSimpleInfoListBean.class);
                 if (bean.data != null && bean.data.size() > 0) {
                     mInfoList = bean.data;
+                    Iterator<PersonnelSimpleInfo> iterator = mInfoList.iterator();
+                    while (iterator.hasNext()) {
+                        PersonnelSimpleInfo info = iterator.next();
+                        if (info.name.equals(mHideName)) {
+                            iterator.remove();
+                        }
+                    }
                     mAdapter = new SelectClassPersonAdapter(ClassPersonSelectActivity.this, mInfoList);
                     mListView.setAdapter(mAdapter);
                 }
