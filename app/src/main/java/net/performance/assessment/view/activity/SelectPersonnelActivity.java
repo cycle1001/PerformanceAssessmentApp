@@ -56,15 +56,12 @@ public class SelectPersonnelActivity extends BaseActivity {
     @Override
     protected void initView() {
         super.initView();
-<<<<<<< HEAD
+
         //lvDepartment = ViewUtils.xFindViewById(this, R.id.department_list_view);
-=======
         if (getIntent() != null) {
             mHideName = getIntent().getStringExtra("hideName");
         }
 
-        lvDepartment = ViewUtils.xFindViewById(this, R.id.department_list_view);
->>>>>>> cb547a09c7bde954f6ad7d9c049d4511a27e8876
         lvPersonnel = ViewUtils.xFindViewById(this, R.id.personnel_list_view);
         btnCheck = ViewUtils.xFindViewById(this, R.id.btn_select_confirm);
     }
@@ -135,12 +132,6 @@ public class SelectPersonnelActivity extends BaseActivity {
                 PersonnelSimpleInfoListBean bean = JsonParser.getInstance().getBeanFromJsonString(
                         result, PersonnelSimpleInfoListBean.class);
                 if (bean.data != null && bean.data.size() > 0) {
-<<<<<<< HEAD
-                    mPersonnelSimpleInfos.clear();
-                    mPersonnelSimpleInfos.addAll(bean.data);
-                    mPersonnelInfoAdapter.initData();
-                    mPersonnelInfoAdapter.notifyDataSetChanged();
-=======
                     List<PersonnelSimpleInfo> list = bean.data;
                     Iterator<PersonnelSimpleInfo> iterator = list.iterator();
                     while (iterator.hasNext()) {
@@ -149,12 +140,12 @@ public class SelectPersonnelActivity extends BaseActivity {
                             iterator.remove();
                         }
                     }
-                    mDepartmentInfos.clear();
-                    mDepartmentInfos.addAll(list);
-                    mDepartmentInfoAdapter.notifyDataSetChanged();
+                    mPersonnelSimpleInfos.clear();
+                    mPersonnelSimpleInfos.addAll(bean.data);
+                    mPersonnelInfoAdapter.initData();
+                    mPersonnelInfoAdapter.notifyDataSetChanged();
 
                     //saveResult( result );
->>>>>>> cb547a09c7bde954f6ad7d9c049d4511a27e8876
                 }
             } else {
                 ToastUtil.showErrorMessage(mContext, detectedBean.message, detectedBean.errorCode);
