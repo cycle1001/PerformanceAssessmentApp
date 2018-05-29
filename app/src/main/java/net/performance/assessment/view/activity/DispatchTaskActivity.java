@@ -12,6 +12,7 @@ import net.performance.assessment.entity.type.TaskType;
 import net.performance.assessment.network.http.DispatchTaskAPI;
 import net.performance.assessment.utils.CommonUtils;
 import net.performance.assessment.utils.JsonParser;
+import net.performance.assessment.utils.LogUtils;
 import net.performance.assessment.utils.TimeUtils;
 import net.performance.assessment.utils.ToastUtil;
 import net.performance.assessment.utils.ViewUtils;
@@ -26,6 +27,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -230,7 +232,7 @@ public class DispatchTaskActivity extends BaseActivity
         {
             if ( data != null )
             {
-                PersonnelIconItemInfo itemInfo = ( PersonnelIconItemInfo ) data.getSerializableExtra( Constant.SELECT_DIRECTOR );
+                /*PersonnelIconItemInfo itemInfo = ( PersonnelIconItemInfo ) data.getSerializableExtra( Constant.SELECT_DIRECTOR );
                 if ( itemInfo != null )
                 {
                     boolean isExisted = false;
@@ -249,7 +251,19 @@ public class DispatchTaskActivity extends BaseActivity
                         mDirectorList.add( index , itemInfo );
                         mAdapter.notifyDataSetChanged( );
                     }
+                }*/
+
+                PersonnelIconItemInfo[ ] itemInfos = ( PersonnelIconItemInfo[] ) data.getExtras().getSerializable(
+                        Constant.SELECT_DIRECTOR );
+                if ( itemInfos != null && itemInfos.length > 0 )
+                {
+                    mDirectorList.clear();
+                    List<PersonnelIconItemInfo> tempList = Arrays.asList( itemInfos );
+                    mDirectorList.addAll( tempList );
+                    mDirectorList.add( mAddItemInfo );
+                    mAdapter.notifyDataSetChanged( );
                 }
+
             }
         }
     }

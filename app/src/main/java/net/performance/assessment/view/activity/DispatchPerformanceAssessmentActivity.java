@@ -242,9 +242,8 @@ public class DispatchPerformanceAssessmentActivity extends BaseActivity {
             String taskIdStr = ViewUtils.getEditViewContent(tvTaskId);
 
             finishScore = ViewUtils.getEditViewContent(tvQualityAssessment);
-            int qualityAssessmentScore = Integer.parseInt(finishScore);
-            if (qualityAssessmentScore <= 0) {
-                ToastUtil.showTip(mContext, getString(R.string.toast_quality_assessment_score_limitation));
+            if (TextUtils.isEmpty(finishScore)) {
+                ToastUtil.showCenterTip(this, "请输入质量考核计分");
                 return;
             }
             double score01 = Double.valueOf(finishScore);

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -12,7 +13,63 @@
             app:left_background="@drawable/btn_back_selector"
             app:title_text="@string/label_select_director"/>
 
-    <ScrollView
+    <LinearLayout
+            android:id="@+id/ll_select_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/c_white"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10">
+
+        <TextView
+                style="@style/style_1e_label"
+                android:text="全选"
+                android:onClick="selectAll"/>
+
+        <TextView
+                style="@style/style_1e_label"
+                android:text="取消"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:onClick="selectCancel"/>
+
+        <TextView
+                style="@style/style_1e_label"
+                android:text="反选"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:onClick="antiElection"/>
+
+        <Button
+                android:id="@+id/btn_select_confirm"
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginLeft="@dimen/dimen_40"
+                android:background="@drawable/btn_bg_normal"
+                android:textColor="@color/c_white"
+                android:onClick="confirmSelect"
+                android:text="完成(0)"/>
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/ll_select_option"
+            android:background="@color/c_e5e5e5" />
+
+    <ListView
+            android:id="@+id/personnel_list_view"
+            style="@style/style_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view_line"
+            android:layout_below="@+id/custom_top_bar"
+            android:divider="@drawable/custom_divider"
+            tools:listitem="@layout/item_class_person"/>
+
+    <!--<ScrollView
           style="@style/style_scroll_view">
 
         <LinearLayout
@@ -43,6 +100,6 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    </ScrollView>-->
 
-</LinearLayout>
+</RelativeLayout>
