@@ -27,7 +27,7 @@ public class MonthPerformanceScoreAdapter extends CommonAdapter<MonthPerformance
         tvDepartmentalScore.setText( String.valueOf( info.departMentScore ) );
 
         TextView tvFinalScore = holder.getItemView( R.id.tv_final_score );
-        tvFinalScore.setText( String.valueOf( info.departMentScore ) );
+        tvFinalScore.setText( String.valueOf( info.finalEmpScore ) );
     }
 
     @Override
