@@ -176,8 +176,8 @@ public class UpdateDispatchedTaskProgressActivity extends BaseActivity
             if ( images != null && images.size( ) > 0 )
             {
                 ImageItem imageItem = images.get( 0 );
-                byte[ ] temp = FileUtils.readFile( imageItem.path );
-                base64Str = Base64Utils.encode( temp );
+//                byte[ ] temp = FileUtils.readFile( imageItem.path );
+                base64Str = Base64Utils.encode( imageItem.path );
                 pictureFormat = PictureFormat.getFormat( imageItem.mimeType );
                 /*mimeType===image/jpeg
                     path===/storage/emulated/0/DCIM/Camera/IMG_20171206_092003.jpg*/

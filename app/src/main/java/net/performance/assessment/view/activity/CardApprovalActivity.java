@@ -73,7 +73,7 @@ public class CardApprovalActivity extends BaseActivity {
 
             mPicUrl = mInfo.workPicture;
             if (!TextUtils.isEmpty(mPicUrl)) {
-                mPicUrl = mPicUrl.replaceAll("/\\\\", "///");
+                mPicUrl = mPicUrl.replaceAll("\\\\", "///");
                 GlideApp.with(this).load(mPicUrl)
                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                         .error(R.drawable.ic_default_pic)

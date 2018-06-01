@@ -216,7 +216,7 @@ public class DispatchPerformanceAssessmentActivity extends BaseActivity {
 
             mPicPath = mDispatchTaskInfo.finishPictures;
             if (!TextUtils.isEmpty(mPicPath)) {
-                mPicPath = mPicPath.replace("\\", "//");
+                mPicPath = mPicPath.replace("\\\\", "//");
                 GlideApp.with(this).load(mPicPath)
                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                         .error(R.drawable.ic_default_pic)

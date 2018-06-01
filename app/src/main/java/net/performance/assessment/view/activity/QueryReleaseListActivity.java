@@ -17,6 +17,7 @@ import net.performance.assessment.view.adapter.ReleaseListAdapter;
 import net.performance.assessment.view.widget.LoadingDialog;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class QueryReleaseListActivity extends BaseActivity implements AdapterView.OnItemClickListener {
@@ -70,7 +71,11 @@ public class QueryReleaseListActivity extends BaseActivity implements AdapterVie
                 queryResult = JsonParser.getInstance( ).getBeanFromJsonString(result, QueryReleaseListBean.class );
                 if (queryResult.data != null && queryResult.data.size() > 0) {
                     showListView();
-                    mReleaseList.addAll(queryResult.data);
+                    List<ReleaseListBean> data = queryResult.data;
+                    HashSet<ReleaseListBean> hashSet = new HashSet<>(data);
+                    data.clear();
+                    data.addAll(hashSet);
+                    mReleaseList.addAll(data);
                     mAdapter.setDataList(mReleaseList);
                     mAdapter.notifyDataSetChanged();
                 } else {

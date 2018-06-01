@@ -172,8 +172,8 @@ public class MakeUpCardApplicationActivity extends BaseActivity {
             return;
         }
         ImageItem imageItem = images.get( 0 );
-        byte[ ] temp = FileUtils.readFile( imageItem.path );
-        String base64Str = Base64Utils.encode( temp );
+//        byte[ ] temp = FileUtils.readFile( imageItem.path );
+        String base64Str = Base64Utils.encode( imageItem.path );
         String pictureFormat = PictureFormat.getFormat( imageItem.mimeType );
 
         mLoadingDialog = new LoadingDialog(this);

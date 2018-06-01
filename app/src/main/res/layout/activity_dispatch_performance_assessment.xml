@@ -325,8 +325,7 @@
                     android:layout_below="@+id/label_task_img"
                     android:layout_marginTop="@dimen/dimen_10"
                     android:layout_toRightOf="@+id/label_task_img"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_default_pic" />
+                    android:scaleType="fitCenter" />
 
             </RelativeLayout>
 

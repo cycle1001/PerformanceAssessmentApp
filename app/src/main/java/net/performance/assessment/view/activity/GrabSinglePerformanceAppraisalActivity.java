@@ -134,7 +134,7 @@ public class GrabSinglePerformanceAppraisalActivity extends BaseActivity {
 
             finishPicUrl = mGrabSingleBean.finishPictures;
             if (!TextUtils.isEmpty(finishPicUrl)) {
-                finishPicUrl = finishPicUrl.replaceAll("/\\\\", "///");
+                finishPicUrl = finishPicUrl.replaceAll("\\\\", "///");
                 Log.e("url", finishPicUrl);
                 GlideApp.with(this).load(finishPicUrl)
                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
