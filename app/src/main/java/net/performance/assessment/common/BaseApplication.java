@@ -4,6 +4,9 @@ package net.performance.assessment.common;
 import com.baidu.mapapi.SDKInitializer;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.view.CropImageView;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.decode.BaseImageDecoder;
 
 import net.performance.assessment.utils.CustomPushManager;
 import net.performance.assessment.utils.GlideImageLoader;
@@ -36,6 +39,11 @@ public class BaseApplication extends Application {
         SDKInitializer.initialize(getApplicationContext());
 
         oList = new ArrayList<Activity>();
+
+        ImageLoaderConfiguration configuration = new ImageLoaderConfiguration.Builder(getApplicationContext())
+                .imageDecoder(new BaseImageDecoder(true))
+                .build();
+        ImageLoader.getInstance().init(configuration);
 
         //AppInitializeService.start(this);
 

@@ -3,6 +3,7 @@ package net.performance.assessment.view.activity;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import net.performance.assessment.R;
 import net.performance.assessment.entity.BaseResultBean;
@@ -136,11 +137,12 @@ public class GrabSinglePerformanceAppraisalActivity extends BaseActivity {
             if (!TextUtils.isEmpty(finishPicUrl)) {
                 finishPicUrl = finishPicUrl.replaceAll("\\\\", "///");
                 Log.e("url", finishPicUrl);
-                GlideApp.with(this).load(finishPicUrl)
-                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                        .error(R.drawable.ic_default_pic)
-                        .placeholder(R.drawable.ic_default_pic)
-                        .into(mIvGspaFinishPic);
+//                GlideApp.with(this).load(finishPicUrl)
+//                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+//                        .error(R.drawable.ic_default_pic)
+//                        .placeholder(R.drawable.ic_default_pic)
+//                        .into(mIvGspaFinishPic);
+                ImageLoader.getInstance().displayImage(finishPicUrl, mIvGspaFinishPic, getImageOptions());
             }
         }
     }

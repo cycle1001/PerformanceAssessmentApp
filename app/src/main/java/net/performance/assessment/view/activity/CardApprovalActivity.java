@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import net.performance.assessment.R;
 import net.performance.assessment.entity.BaseResultBean;
@@ -74,11 +75,12 @@ public class CardApprovalActivity extends BaseActivity {
             mPicUrl = mInfo.workPicture;
             if (!TextUtils.isEmpty(mPicUrl)) {
                 mPicUrl = mPicUrl.replaceAll("\\\\", "///");
-                GlideApp.with(this).load(mPicUrl)
+                /*GlideApp.with(this).load(mPicUrl)
                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                         .error(R.drawable.ic_default_pic)
                         .placeholder(R.drawable.ic_default_pic)
-                        .into(mIvPic);
+                        .into(mIvPic);*/
+                ImageLoader.getInstance().displayImage(mPicUrl, mIvPic, getImageOptions());
             }
         }
     }

@@ -7,7 +7,7 @@ import net.performance.assessment.utils.StringUtil;
  */
 public class Config {
 
-    public static final boolean isDebug = true;
+    public static final boolean isDebug = false;
 
     public static final boolean enableCheckLeak = true;
 

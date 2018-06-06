@@ -141,8 +141,8 @@ public class Base64Utils {
             int width = options.outWidth;
             int inSampleSize = 2; // 默认像素压缩比例，压缩为原图的1/2
             int minLen = Math.min(height, width); // 原图的最小边长
-            if (minLen > 250) { // 如果原始图像的最小边长大于100dp（此处单位我认为是dp，而非px）
-                float ratio = (float) minLen / 250.0f; // 计算像素压缩比例
+            if (minLen > 200) { // 如果原始图像的最小边长大于100dp（此处单位我认为是dp，而非px）
+                float ratio = (float) minLen / 200.0f; // 计算像素压缩比例
                 inSampleSize = (int) ratio;
             }
             options.inJustDecodeBounds = false; // 计算好压缩比例后，这次可以去加载原图了

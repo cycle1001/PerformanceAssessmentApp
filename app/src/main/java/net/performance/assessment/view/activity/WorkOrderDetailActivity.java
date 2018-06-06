@@ -1,6 +1,7 @@
 package net.performance.assessment.view.activity;
 
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import net.performance.assessment.R;
 import net.performance.assessment.common.Constant;
@@ -102,11 +103,12 @@ public class WorkOrderDetailActivity extends BaseActivity
 
             if ( !TextUtils.isEmpty(mWorkOrderInfo.finishPictures )) {
                 String picturePath = mWorkOrderInfo.finishPictures.replace("\\", "//");
-                GlideApp.with(this ).load(picturePath )
-                        .diskCacheStrategy( DiskCacheStrategy.RESOURCE )
-                        .error(R.drawable.ic_default_pic)
-                        .placeholder(R.drawable.ic_default_pic)
-                        .into(ivTaskImage);
+//                GlideApp.with(this ).load(picturePath )
+//                        .diskCacheStrategy( DiskCacheStrategy.RESOURCE )
+//                        .error(R.drawable.ic_default_pic)
+//                        .placeholder(R.drawable.ic_default_pic)
+//                        .into(ivTaskImage);
+                ImageLoader.getInstance().displayImage(picturePath, ivTaskImage, getImageOptions());
             }
             else {
                 ViewUtils.xFindViewById(this, R.id.label_task_img).setVisibility( View.GONE );

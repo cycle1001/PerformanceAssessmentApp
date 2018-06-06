@@ -117,3 +117,6 @@
 -keep class com.baidu.location.** {*;}
 -keep class com.baidu.lbsapi.** {*;}
 -keep class com.baidu.platform.** {*;}
+
+-dontwarn com.nostra13.universalimageloader.**
+-keep class com.nostra13.universalimageloader.** { *; }

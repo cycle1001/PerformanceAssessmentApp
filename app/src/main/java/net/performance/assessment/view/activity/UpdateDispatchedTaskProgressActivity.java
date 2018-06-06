@@ -179,18 +179,11 @@ public class UpdateDispatchedTaskProgressActivity extends BaseActivity
 //                byte[ ] temp = FileUtils.readFile( imageItem.path );
                 base64Str = Base64Utils.encode( imageItem.path );
                 pictureFormat = PictureFormat.getFormat( imageItem.mimeType );
-                /*mimeType===image/jpeg
-                    path===/storage/emulated/0/DCIM/Camera/IMG_20171206_092003.jpg*/
-                LogUtils.v( "mimeType===" + imageItem.mimeType );
-                LogUtils.v( "path===" + imageItem.path );
             }
             else {
                 ToastUtil.showTip( mContext , getString( R.string.toast_add_finished_task_image ) );
                 return;
             }
-
-            LogUtils.v( "dispatchStatusStr===" + dispatchStatusStr );
-            LogUtils.v( "pictureFormat===" + pictureFormat );
 
             showProgressDialog( "" );
             updateProgressFlag = DispatchTaskAPI.submitDispatchedTaskProgress( taskIdStr,

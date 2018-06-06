@@ -1,6 +1,7 @@
 package net.performance.assessment.view.activity;
 
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import net.performance.assessment.R;
 import net.performance.assessment.cache.LoginInfoCache;
@@ -217,11 +218,12 @@ public class DispatchPerformanceAssessmentActivity extends BaseActivity {
             mPicPath = mDispatchTaskInfo.finishPictures;
             if (!TextUtils.isEmpty(mPicPath)) {
                 mPicPath = mPicPath.replace("\\\\", "//");
-                GlideApp.with(this).load(mPicPath)
-                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                        .error(R.drawable.ic_default_pic)
-                        .placeholder(R.drawable.ic_default_pic)
-                        .into(ivTaskImage);
+//                GlideApp.with(this).load(mPicPath)
+//                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+//                        .error(R.drawable.ic_default_pic)
+//                        .placeholder(R.drawable.ic_default_pic)
+//                        .into(ivTaskImage);
+                ImageLoader.getInstance().displayImage(mPicPath, ivTaskImage, getImageOptions());
             }
 
             hasDispatchInfo = true;
