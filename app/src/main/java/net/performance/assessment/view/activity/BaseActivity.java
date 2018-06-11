@@ -13,14 +13,9 @@ import net.performance.assessment.view.widget.CustomTitleBar;
 import net.performance.assessment.view.widget.LoadingDialog;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 /**
  *
@@ -217,18 +212,5 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     //销毁所有Activity方法
     public void removeALLActivity() {
         application.removeALLActivity();// 调用myApplication的销毁所有Activity方法
-    }
-
-    public DisplayImageOptions getImageOptions() {
-        return new DisplayImageOptions.Builder()
-                .showImageOnLoading(R.drawable.ic_default_pic)          // 设置图片下载期间显示的图片
-                .showImageForEmptyUri(R.drawable.ic_default_pic)  // 设置图片Uri为空或是错误的时候显示的图片
-                .showImageOnFail(R.drawable.ic_default_pic)       // 设置图片加载或解码过程中发生错误显示的图片
-                .bitmapConfig(Bitmap.Config.RGB_565)
-                .considerExifParams(true)
-                .cacheInMemory(true)                        // 设置下载的图片是否缓存在内存中
-                .cacheOnDisk(false)                          // 设置下载的图片是否缓存在SD卡中
-                .displayer(new RoundedBitmapDisplayer(0))  // 设置成圆角图片
-                .build();
     }
 }

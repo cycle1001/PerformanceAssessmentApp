@@ -1,7 +1,6 @@
 package net.performance.assessment.view.activity;
 
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import net.performance.assessment.R;
 import net.performance.assessment.cache.LoginInfoCache;
@@ -12,7 +11,6 @@ import net.performance.assessment.entity.DispatchTaskInfo;
 import net.performance.assessment.entity.LoginInfo;
 import net.performance.assessment.entity.type.DispatchStatus;
 import net.performance.assessment.network.http.DispatchTaskAPI;
-import net.performance.assessment.network.image.GlideApp;
 import net.performance.assessment.utils.Arith;
 import net.performance.assessment.utils.JsonParser;
 import net.performance.assessment.utils.StringUtil;
@@ -125,7 +123,6 @@ public class DispatchPerformanceAssessmentActivity extends BaseActivity {
                 double score01 = Double.valueOf(finishScore);
                 if (score01 > 0 && score01 <= 10) {
                     calculateScore();
-                    return;
                 } else {
                     finishScore = "0.0";
                     ToastUtil.showCenterTip(DispatchPerformanceAssessmentActivity.this, "请输入质量考核计分,10分制");
@@ -218,12 +215,11 @@ public class DispatchPerformanceAssessmentActivity extends BaseActivity {
             mPicPath = mDispatchTaskInfo.finishPictures;
             if (!TextUtils.isEmpty(mPicPath)) {
                 mPicPath = mPicPath.replace("\\\\", "//");
-//                GlideApp.with(this).load(mPicPath)
-//                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-//                        .error(R.drawable.ic_default_pic)
-//                        .placeholder(R.drawable.ic_default_pic)
-//                        .into(ivTaskImage);
-                ImageLoader.getInstance().displayImage(mPicPath, ivTaskImage, getImageOptions());
+                Picasso.get()
+                        .load(mPicPath)
+                        .placeholder(R.drawable.ic_default_pic)
+                        .error(R.drawable.ic_default_pic)
+                        .into(ivTaskImage);
             }
 
             hasDispatchInfo = true;

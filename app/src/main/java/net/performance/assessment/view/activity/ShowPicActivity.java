@@ -1,17 +1,11 @@
 package net.performance.assessment.view.activity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.view.View;
 
-import com.bumptech.glide.Priority;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
+import com.squareup.picasso.Picasso;
 
 import net.performance.assessment.R;
-import net.performance.assessment.network.image.GlideApp;
 import net.performance.assessment.view.widget.SmoothImageView;
 
 public class ShowPicActivity extends BaseActivity {
@@ -58,32 +52,11 @@ public class ShowPicActivity extends BaseActivity {
         smoothImageView.setOriginalInfo(locationW, locationH, locationX, locationY);
         smoothImageView.transformIn();
 
-//        GlideApp.with(this)
-//                .load(url)
-//                .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-//                .priority(Priority.IMMEDIATE)
-//                .into(smoothImageView);
-        ImageLoader.getInstance().displayImage(url, smoothImageView, new ImageLoadingListener() {
-            @Override
-            public void onLoadingStarted(String imageUri, View view) {
-                showProgressDialog("");
-            }
-
-            @Override
-            public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-                hideProgressDialog();
-            }
-
-            @Override
-            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-                hideProgressDialog();
-            }
-
-            @Override
-            public void onLoadingCancelled(String imageUri, View view) {
-                hideProgressDialog();
-            }
-        });
+        Picasso.get()
+                .load(url)
+                .placeholder(R.drawable.ic_default_pic)
+                .error(R.drawable.ic_default_pic)
+                .into(smoothImageView);
     }
 
     @Override

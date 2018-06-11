@@ -4,19 +4,16 @@ import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Build;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import net.performance.assessment.R;
 import net.performance.assessment.entity.BaseResultBean;
 import net.performance.assessment.entity.CardApprovalInfo;
 import net.performance.assessment.network.http.AttendanceTaskAPI;
-import net.performance.assessment.network.image.GlideApp;
 import net.performance.assessment.utils.JsonParser;
 import net.performance.assessment.utils.ToastUtil;
 
@@ -75,12 +72,11 @@ public class CardApprovalActivity extends BaseActivity {
             mPicUrl = mInfo.workPicture;
             if (!TextUtils.isEmpty(mPicUrl)) {
                 mPicUrl = mPicUrl.replaceAll("\\\\", "///");
-                /*GlideApp.with(this).load(mPicUrl)
-                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                        .error(R.drawable.ic_default_pic)
+                Picasso.get()
+                        .load(mPicUrl)
                         .placeholder(R.drawable.ic_default_pic)
-                        .into(mIvPic);*/
-                ImageLoader.getInstance().displayImage(mPicUrl, mIvPic, getImageOptions());
+                        .error(R.drawable.ic_default_pic)
+                        .into(mIvPic);
             }
         }
     }

@@ -1,15 +1,13 @@
 package net.performance.assessment.view.activity;
 
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import net.performance.assessment.R;
 import net.performance.assessment.entity.BaseResultBean;
 import net.performance.assessment.entity.GrabSingleBean;
 import net.performance.assessment.network.http.OrderSheetTaskAPI;
-import net.performance.assessment.network.image.GlideApp;
 import net.performance.assessment.utils.Arith;
 import net.performance.assessment.utils.JsonParser;
 import net.performance.assessment.utils.TimeUtils;
@@ -137,12 +135,11 @@ public class GrabSinglePerformanceAppraisalActivity extends BaseActivity {
             if (!TextUtils.isEmpty(finishPicUrl)) {
                 finishPicUrl = finishPicUrl.replaceAll("\\\\", "///");
                 Log.e("url", finishPicUrl);
-//                GlideApp.with(this).load(finishPicUrl)
-//                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-//                        .error(R.drawable.ic_default_pic)
-//                        .placeholder(R.drawable.ic_default_pic)
-//                        .into(mIvGspaFinishPic);
-                ImageLoader.getInstance().displayImage(finishPicUrl, mIvGspaFinishPic, getImageOptions());
+                Picasso.get()
+                        .load(finishPicUrl)
+                        .placeholder(R.drawable.ic_default_pic)
+                        .error(R.drawable.ic_default_pic)
+                        .into(mIvGspaFinishPic);
             }
         }
     }
@@ -178,7 +175,6 @@ public class GrabSinglePerformanceAppraisalActivity extends BaseActivity {
                 double score01 = Double.valueOf(finishScore);
                 if (score01 > 0 && score01 <= 10) {
                     calculateScore();
-                    return;
                 } else {
                     finishScore = "0.0";
                     ToastUtil.showCenterTip(GrabSinglePerformanceAppraisalActivity.this, "请输入质量考核计分,10分制");
